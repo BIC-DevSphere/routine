@@ -2,7 +2,12 @@
 module.exports = {
   content: ["*.html"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        pop: ["Poppins", "sans-serif"],
+      },
+    },
   },
   plugins: [],
+  darkMode: "class",
 };
