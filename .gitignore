@@ -1,0 +1,4 @@
+node_modules/
+
+# Tailwind generated CSS
+**/output.css
