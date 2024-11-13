@@ -6,6 +6,243 @@
     <title>Routine</title>
     <link rel="icon" type="assets/png" href="/src/assets/icon.png">
     <link rel="stylesheet" href="src/css/output.css" />
+    <link rel="stylesheet" href="src/input.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/bed699dc9b.js" crossorigin="anonymous"></script>
   </head>
-  <body></body>
+  <body class="font-pop">
+    <!-- <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <th class="px-6 py-4">Time</th>
+        <th class="px-6 py-4">Type</th>
+        <th class="px-6 py-4">Code</th>
+        <th class="px-6 py-4">Title</th>
+        <th class="px-6 py-4">Lecturer</th>
+        <th class="px-6 py-4">Group</th>
+        <th class="px-6 py-4">Room</th>
+      </thead>
+      <tbody class="container">
+        <tr
+          class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
+        >
+          <th
+            scope="row"
+            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+          >
+            Apple MacBook Pro 17"
+          </th>
+          <td class="px-6 py-4">Silver</td>
+          <td class="px-6 py-4">Laptop</td>
+          <td class="px-6 py-4">$2999</td>
+          <td class="px-6 py-4">
+            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+              >Edit</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table> -->
+    <nav
+      class="flex justify-between py-3 px-6 items-center border-b border-gray-400 bg-white dark:bg-gray-900"
+    >
+      <div class="nav-left flex items-center gap-3 text-black dark:text-white">
+        <i class="fa-solid fa-book text-base"></i>
+        <p class="text-2xl tracking-wider font-bold">Routine</p>
+      </div>
+      <div class="nav-right">
+        <button
+          onclick="toggleTheme()"
+          class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+        >
+          <svg class="fill-violet-700 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <svg class="fill-yellow-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <main class="py-2 px-4 flex justify-center flex-col gap-10">
+      <div class="main-title mt-5 flex flex-col gap-10 items-center">
+        <p class="text-xl font-semibold text-center">Select Your Class Group</p>
+        <p class="text-sm font-normal">
+          Your are currently viewing schedule of Group <span class="display-group">L4CG1</span>
+        </p>
+        <div class="relative inline-block text-left">
+          <div>
+            <button
+              type="button"
+              class="flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 dark:bg-gray-900 dark:text-gray-200"
+              id="menu-button"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              Select group
+              <svg
+                class="-mr-1 size-5 text-gray-400 ml-6"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            id="dropdown-menu"
+            class="w-full absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none hidden dark:bg-gray-900 dark:ring-gray-700"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+            tabindex="-1"
+          >
+            <div class="py-1" role="none">
+              <button
+                type="submit"
+                class="block w-full px-4 py-2 text-left text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-item-3"
+              >
+                L4CG1
+              </button>
+              <button
+                type="submit"
+                class="block w-full px-4 py-2 text-left text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-item-3"
+              >
+                L4CG2
+              </button>
+              <button
+                type="submit"
+                class="block w-full px-4 py-2 text-left text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-item-3"
+              >
+                L4CG3
+              </button>
+              <form method="POST" action="#" role="none">
+                <button
+                  type="submit"
+                  class="block w-full px-4 py-2 text-left text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="menu-item-3"
+                >
+                  L4CG4
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 mt-10"
+      >
+        <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+          <li class="me-2">
+            <button
+              href="#"
+              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+            >
+              Sunday
+            </button>
+          </li>
+          <li class="me-2">
+            <button
+              href="#"
+              class="inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500"
+              aria-current="page"
+            >
+              Monday
+            </button>
+          </li>
+          <li class="me-2">
+            <button
+              href="#"
+              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+            >
+              Tuesday
+            </button>
+          </li>
+          <li class="me-2">
+            <button
+              href="#"
+              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+            >
+              Wednesday
+            </button>
+          </li>
+          <li class="me-2">
+            <button
+              href="#"
+              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+            >
+              Thursday
+            </button>
+          </li>
+          <li class="me-2">
+            <button
+              href="#"
+              class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+            >
+              Friday
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="classes-wrapper flex flex-col gap-4">
+        <div class="classes-card flex justify-around p-2 items-center">
+          <div class="card-left">
+            <div class="info">
+              <p class="text-sm md:text-base font-semibold">Fundamentals of Computing</p>
+              <p class="text-xs text-gray-400">10:00 - 12:00PM</p>
+            </div>
+          </div>
+          <div class="card-right">
+            <a href="" class="hover:text-blue-400 hover:underline text-sm">View More</a>
+          </div>
+        </div>
+        <div class="classes-card flex justify-around p-2 items-center">
+          <div class="card-left">
+            <div class="info">
+              <p class="text-sm md:text-base font-semibold">Fundamentals of Computing</p>
+              <p class="text-xs text-gray-400">10:00 - 12:00PM</p>
+            </div>
+          </div>
+          <div class="card-right">
+            <a href="" class="hover:text-blue-400 hover:underline text-sm">View More</a>
+          </div>
+        </div>
+        <div class="classes-card flex justify-around p-2 items-center">
+          <div class="card-left">
+            <div class="info">
+              <p class="text-sm md:text-base font-semibold">Fundamentals of Computing</p>
+              <p class="text-xs text-gray-400">10:00 - 12:00PM</p>
+            </div>
+          </div>
+          <div class="card-right">
+            <a href="" class="hover:text-blue-400 hover:underline text-sm">View More</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="src/script/script.js"></script>
+  </body>
 </html>
