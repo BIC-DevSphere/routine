@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Routine</title>
-    <link rel="icon" type="assets/png" href="/src/assets/favicon-icon.png">
+    <link rel="icon" type="assets/png" href="/src/assets/favicon-icon.png" />
     <link rel="stylesheet" href="src/css/output.css" />
     <link rel="stylesheet" href="src/input.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/bed699dc9b.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/bed699dc9b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="font-pop">
     <!-- <table class="w-full text-sm text-left  rtl:text-right text-gray-500 dark:text-gray-400">
@@ -46,21 +49,31 @@
       </tbody>
     </table> -->
     <nav
-      class="flex justify-between py-3 px-6 items-center border-b border-gray-400 bg-white dark:bg-gray-900"
+      class="flex items-center justify-between border-b border-gray-400 bg-white px-6 py-3 dark:bg-gray-900"
     >
       <div class="nav-left flex items-center gap-3 text-black dark:text-white">
         <i class="fa-solid fa-book text-base"></i>
-        <p class="text-2xl tracking-wider font-bold">Routine</p>
+        <p class="text-2xl font-bold tracking-wider">Routine</p>
       </div>
       <div class="nav-right">
         <button
           onclick="toggleTheme()"
           class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
         >
-          <svg class="fill-violet-700 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          <svg
+            class="block fill-violet-700 dark:hidden"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+            ></path>
           </svg>
-          <svg class="fill-yellow-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+          <svg
+            class="hidden fill-yellow-500 dark:block"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
             <path
               d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
               fill-rule="evenodd"
@@ -70,11 +83,12 @@
         </button>
       </div>
     </nav>
-    <main class="py-2 px-4 flex justify-center flex-col gap-10 bg-white">
-      <div class="main-title mt-5 flex flex-col gap-10 items-center">
-        <p class="text-xl font-semibold text-center">Select Your Class Group</p>
+    <main class="flex flex-col justify-center gap-10 bg-white px-4 py-2">
+      <div class="main-title mt-5 flex flex-col items-center gap-10">
+        <p class="text-center text-xl font-semibold">Select Your Class Group</p>
         <p class="text-sm font-normal">
-          Your are currently viewing schedule of Group <span class="display-group">L4CG1</span>
+          Your are currently viewing schedule of Group
+          <span class="display-group">L4CG1</span>
         </p>
         <div class="relative inline-block text-left">
           <div>
@@ -87,7 +101,7 @@
             >
               Select group
               <svg
-                class="-mr-1 size-5 text-gray-400 ml-6"
+                class="-mr-1 ml-6 size-5 text-gray-400"
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 aria-hidden="true"
@@ -103,7 +117,7 @@
           </div>
           <div
             id="dropdown-menu"
-            class="w-full absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none hidden dark:bg-gray-900 dark:ring-gray-700"
+            class="absolute right-0 z-10 mt-2 hidden w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none dark:bg-gray-900 dark:ring-gray-700"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="menu-button"
@@ -112,7 +126,7 @@
             <div class="py-1" role="none">
               <button
                 type="submit"
-                class="block w-full px-4 py-2 text-left text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
+                class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
                 role="menuitem"
                 tabindex="-1"
                 id="menu-item-3"
@@ -121,7 +135,7 @@
               </button>
               <button
                 type="submit"
-                class="block w-full px-4 py-2 text-left text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
+                class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
                 role="menuitem"
                 tabindex="-1"
                 id="menu-item-3"
@@ -130,7 +144,7 @@
               </button>
               <button
                 type="submit"
-                class="block w-full px-4 py-2 text-left text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
+                class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
                 role="menuitem"
                 tabindex="-1"
                 id="menu-item-3"
@@ -140,7 +154,7 @@
               <form method="POST" action="#" role="none">
                 <button
                   type="submit"
-                  class="block w-full px-4 py-2 text-left text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
+                  class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
                   role="menuitem"
                   tabindex="-1"
                   id="menu-item-3"
@@ -153,13 +167,15 @@
         </div>
       </div>
       <div
-        class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700 mt-10"
+        class="mt-10 border-b border-gray-200 text-center text-sm font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
       >
-        <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+        <ul
+          class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
+        >
           <li class="me-2">
             <button
               href="#"
-              class="btn-day inline-block p-4 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+              class="btn-day inline-block rounded-t-lg p-4 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
             >
               Sunday
             </button>
@@ -167,7 +183,7 @@
           <li class="me-2">
             <button
               href="#"
-              class="btn-day inline-block p-4 rounded-t-lg dark:text-blue-500 dark:border-blue-500"
+              class="btn-day inline-block rounded-t-lg p-4 dark:border-blue-500 dark:text-blue-500"
               aria-current="page"
             >
               Monday
@@ -176,7 +192,7 @@
           <li class="me-2">
             <button
               href="#"
-              class="btn-day inline-block p-4 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+              class="btn-day inline-block rounded-t-lg p-4 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
             >
               Tuesday
             </button>
@@ -184,7 +200,7 @@
           <li class="me-2">
             <button
               href="#"
-              class="btn-day inline-block p-4 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+              class="btn-day inline-block rounded-t-lg p-4 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
             >
               Wednesday
             </button>
@@ -192,7 +208,7 @@
           <li class="me-2">
             <button
               href="#"
-              class="btn-day inline-block p-4 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+              class="btn-day inline-block rounded-t-lg p-4 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
             >
               Thursday
             </button>
@@ -200,30 +216,36 @@
           <li class="me-2">
             <button
               href="#"
-              class="btn-day inline-block p-4 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+              class="btn-day inline-block rounded-t-lg p-4 hover:border-gray-300 hover:text-gray-600 dark:hover:text-gray-300"
             >
               Friday
             </button>
           </li>
         </ul>
       </div>
-      <div class="classes-wrapper flex flex-col gap-4 w-full md:w-3/4 lg:w-1/2 md:m-auto">
-        <div class="classes-card flex justify-between p-4 items-center w-full">
-          <div class="card-left flex-grow flex items-center gap-6">
+      <div
+        class="classes-wrapper flex w-full flex-col gap-4 md:m-auto md:w-3/4 lg:w-1/2"
+      >
+        <div class="classes-card flex w-full items-center justify-between p-4">
+          <div class="card-left flex flex-grow items-center gap-6">
             <div class="card-cover">
               <img
                 src="https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7496.jpg?t=st=1731552894~exp=1731556494~hmac=3a7078b16ed6f5da6d567ded90c1335d41475639666a146e65a0e40b6257c71d&w=826 "
                 alt=""
-                class="w-14 h-12 md:w-16 md:h-14 lg:w-20 lg:h-16 object-cover rounded-lg shadow-lg"
+                class="h-12 w-14 rounded-lg object-cover shadow-lg md:h-14 md:w-16 lg:h-16 lg:w-20"
               />
             </div>
             <div class="info">
-              <p class="text-sm md:text-base font-semibold">Fundamentals of Computing</p>
+              <p class="text-sm font-semibold md:text-base">
+                Fundamentals of Computing
+              </p>
               <p class="text-xs text-gray-400">10:00 - 12:00PM</p>
             </div>
           </div>
           <div class="card-right">
-            <a href="" class="hover:text-blue-400 hover:underline text-sm">View More</a>
+            <a href="" class="text-sm hover:text-blue-400 hover:underline"
+              >View More</a
+            >
           </div>
         </div>
       </div>
