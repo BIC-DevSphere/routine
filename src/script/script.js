@@ -1,3 +1,5 @@
+// const { doc } = require("prettier");
+
 const scheduleData = {
   SUN: [
     {
@@ -198,3 +200,60 @@ document.addEventListener("click", (event) => {
     dropdownMenu.classList.add("opacity-0", "scale-95");
   }
 });
+document.querySelectorAll(".btn-day").forEach((btn) => {
+  let activeClassNames = [
+    "text-blue-600",
+    "border-b-2",
+    "border-blue-600",
+    "dark:text-blue-500",
+    "dark:border-blue-500",
+  ];
+  btn.addEventListener("click", (e) => {
+    // alert("Hey I am ", e.target);
+    document.querySelectorAll(".btn-day").forEach((button) => {
+      button.classList.remove(...activeClassNames);
+    });
+    e.target.classList.add(...activeClassNames);
+    let selectedButton = e.target.textContent.trim().slice(0, 3).toUpperCase();
+    fetchSchedule(selectedButton);
+  });
+});
+function fetchSchedule(selectedButton) {
+  let classContainer = document.querySelector(".classes-wrapper");
+  let req = Object.entries(scheduleData).forEach(([day, data]) => {
+    // let requiredData = day = selectedButton;
+    // console.log(requiredData);
+    if (day == selectedButton) {
+      document.querySelector(".classes-wrapper").innerHTML = "";
+      data.forEach((dat) => {
+        let newData = document.createElement("div");
+        // newData.classList.add("classes-card","flex","justify-around,`p-2`,`items-center`);
+        newData.classList.add(
+          "classes-card",
+          "flex",
+          "justify-between",
+          "p-2",
+          "items-center",
+          "w-full",
+          "p-4"
+        );
+        newData.innerHTML = `
+                    <div class="card-left flex-grow">
+            <div class="info">
+              <p class="text-sm md:text-base font-semibold">${dat["Module Title"]}</p>
+              <p class="text-xs text-gray-400">${dat.Time}</p>
+            </div>
+          </div>
+          <div class="card-right">
+            <a href="" class="hover:text-blue-400 hover:underline text-sm">View More</a>
+          </div>
+        `;
+        classContainer.appendChild(newData);
+        // console.log(dat);
+      });
+    }
+
+    // document.querySelector(".classes-wrapper").innerHTML = req[0][1][0].Room;
+  });
+  // console.log(req);
+}
