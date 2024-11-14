@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    @apply transition-colors duration-200;
+* {
+  @apply transition-colors duration-200;
+}
+
+.classes-wrapper {
+  width: 50%; /* Full width initially */
+  transition: width 0.3s ease; /* Smooth transition */
+}
+
+.detailed-card {
+  position: absolute; /* Off-screen initially */
+  transition: transform 0.3s ease;
+}
+
+/* When details-visible class is applied, adjust the layout */
+.details-visible .classes-wrapper {
+  width: 50%; /* Adjusts to half width */
+}
+
+.details-visible .detailed-card {
+  transform: translateX(0); /* Brings detailed card into view */
+  width: 50%; /* Adjusts to take half width */
+  position: relative; /* Puts it beside classes-wrapper */
 }

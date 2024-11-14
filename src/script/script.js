@@ -193,7 +193,10 @@ menuButton.addEventListener("click", () => {
 
 // Close the dropdown if clicked outside
 document.addEventListener("click", (event) => {
-  if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+  if (
+    !menuButton.contains(event.target) &&
+    !dropdownMenu.contains(event.target)
+  ) {
     menuButton.setAttribute("aria-expanded", "false");
     dropdownMenu.classList.add("hidden");
     dropdownMenu.classList.remove("opacity-100", "scale-100");
@@ -220,14 +223,15 @@ document.querySelectorAll(".btn-day").forEach((btn) => {
 });
 function fetchSchedule(selectedButton) {
   let classContainer = document.querySelector(".classes-wrapper");
-  let req = Object.entries(scheduleData).forEach(([day, data]) => {
-    // let requiredData = day = selectedButton;
-    // console.log(requiredData);
+
+  // Clear existing content to prevent duplicate elements
+  classContainer.innerHTML = "";
+
+  // Loop through scheduleData and render only the selected day's schedule
+  Object.entries(scheduleData).forEach(([day, data]) => {
     if (day == selectedButton) {
-      document.querySelector(".classes-wrapper").innerHTML = "";
       data.forEach((dat) => {
         let newData = document.createElement("div");
-        // newData.classList.add("classes-card","flex","justify-around,`p-2`,`items-center`);
         newData.classList.add(
           "classes-card",
           "flex",
@@ -238,22 +242,38 @@ function fetchSchedule(selectedButton) {
           "p-4"
         );
         newData.innerHTML = `
-                    <div class="card-left flex-grow">
+          <div class="card-left flex-grow">
             <div class="info">
               <p class="text-sm md:text-base font-semibold">${dat["Module Title"]}</p>
               <p class="text-xs text-gray-400">${dat.Time}</p>
             </div>
           </div>
           <div class="card-right">
-            <a href="" class="hover:text-blue-400 hover:underline text-sm">View More</a>
+            <button class="hover:text-blue-400 hover:underline text-sm view-more">View More</button>
           </div>
         `;
         classContainer.appendChild(newData);
-        // console.log(dat);
       });
     }
-
-    // document.querySelector(".classes-wrapper").innerHTML = req[0][1][0].Room;
   });
-  // console.log(req);
+
+  // Event delegation: Add a single event listener to classContainer
+  classContainer.addEventListener("click", (e) => {
+    // Check if the clicked element has the 'view-more' class
+    if (e.target.classList.contains("view-more")) {
+      console.log("Clicked button:", e.target);
+
+      // Toggle class to show detailed view (assuming detailed view logic exists)
+      showDetailsModal()
+    }
+  });
+}
+
+
+function showDetailsModal(){
+  document.querySelector(".main-content-wrapper").classList.add("details-visible")
+  let closeBtn = document.querySelector(".close-button")
+  closeBtn.addEventListener("click", ()=>{
+    document.querySelector(".main-content-wrapper").classList.remove("details-visible")
+  })
 }
