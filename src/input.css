@@ -6,23 +6,28 @@
   @apply transition-colors duration-200;
 }
 
-.classes-wrapper {
-  width: 70%; /* Full width initially */
-  transition: width 0.3s ease; /* Smooth transition */
-}
-
+/* Initial state for detailed card - off-screen */
 .detailed-card {
-  position: absolute; /* Off-screen initially */
-  transition: transform 0.3s ease;
+  position: absolute;
+  transform: translateX(100vw); /* Initially off-screen */
+  transition: transform 0.3s ease; /* Smooth transition */
 }
 
-/* When details-visible class is applied, adjust the layout */
-.details-visible .classes-wrapper {
-  width: 50%; /* Adjusts to half width */
-}
-
+/* When details-visible class is applied, bring detailed card into view */
 .details-visible .detailed-card {
-  transform: translateX(0); /* Brings detailed card into view */
-  width: 30%; /* Adjusts to 30% width */
-  position: relative; /* Puts it beside classes-wrapper */
+  transform: translateX(0); /* Bring it into view */
+  width: 30%; /* Adjust width */
+  position: relative;
 }
+
+/* When closing, temporarily move the card back */
+.detailed-card.closing {
+  transform: translateX(100vw); /* Transition back off-screen */
+  transition: transform 0.3s ease; /* Ensure smooth transition */
+}
+
+/* Ensure the classes-wrapper width transition works seamlessly */
+.details-visible .classes-wrapper {
+  width: 50%;
+}
+

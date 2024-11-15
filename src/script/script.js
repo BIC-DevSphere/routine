@@ -114,15 +114,29 @@ function fetchSchedule(selectedDay, selectedGroup) {
         );
 
         newData.innerHTML = `
-          <div class="card-left flex-grow">
-            <div class="info">
-              <p class="text-sm md:text-base font-semibold">${dat["Module Title"]}</p>
-              <p class="text-xs text-gray-400">${dat.Time}</p>
+          <div class="card-left flex flex-grow items-center gap-6">
+              <div class="card-cover">
+                <img
+                  src="https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7496.jpg?t=st=1731552894~exp=1731556494~hmac=3a7078b16ed6f5da6d567ded90c1335d41475639666a146e65a0e40b6257c71d&w=826 "
+                  alt=""
+                  class="h-12 w-14 rounded-lg object-cover shadow-lg md:h-14 md:w-16 lg:h-16 lg:w-20"
+                />
+              </div>
+              <div class="info">
+                <div class="main-class-info flex gap-4 items-center">
+                  <p class="text-sm font-semibold md:text-base">
+                    ${dat["Module Title"]}
+                  </p>
+                  <div class="class-code text-xs bg-green-200 py-1 px-3 rounded-full text-gray-600">
+                    ${dat["Module Code"]}
+                  </div>
+                </div>
+                <p class="text-xs text-gray-400">${dat.Time}</p>
+              </div>
             </div>
-          </div>
-          <div class="card-right">
-            <button class="hover:text-blue-400 hover:underline text-sm view-more">View More</button>
-          </div>
+            <div class="card-right">
+              <button class="hover:text-blue-400 hover:underline text-sm view-more">View More</button>
+            </div>
         `;
 
         classContainer.appendChild(newData);
@@ -144,12 +158,27 @@ function fetchSchedule(selectedDay, selectedGroup) {
 
 function showDetailsModal() {
   let mainContainer = document.querySelector(".main-content-wrapper");
+  let detailedCard = document.querySelector(".detailed-card");
+
+  // Add the 'details-visible' class to show the detailed card
   mainContainer.classList.add("details-visible");
+
+  // Remove 'closing' class to allow for smooth transition
+  detailedCard.classList.remove("closing");
+
   let closeBtn = document.querySelector(".close-button");
   closeBtn.addEventListener("click", () => {
-    mainContainer.classList.remove("details-visible");
+    // Add 'closing' class to trigger the close transition (move back off-screen)
+    detailedCard.classList.add("closing");
+
+    // Set a timeout to ensure the closing transition completes before removing the modal
+    setTimeout(() => {
+      // Remove 'details-visible' class to hide the modal after transition
+      mainContainer.classList.remove("details-visible");
+    }, 300); // Duration matches the CSS transition duration
   });
 }
+
 let groupsBtn = document.querySelectorAll(".class-groups-btn");
 groupsBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {
@@ -159,3 +188,4 @@ groupsBtn.forEach((btn) => {
     fetchSchedule("SUN", selectedGroup);
   });
 });
+
