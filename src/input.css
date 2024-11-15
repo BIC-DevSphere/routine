@@ -7,7 +7,7 @@
 }
 
 .classes-wrapper {
-  width: 50%; /* Full width initially */
+  width: 70%; /* Full width initially */
   transition: width 0.3s ease; /* Smooth transition */
 }
 
@@ -23,6 +23,6 @@
 
 .details-visible .detailed-card {
   transform: translateX(0); /* Brings detailed card into view */
-  width: 50%; /* Adjusts to take half width */
+  width: 30%; /* Adjusts to 30% width */
   position: relative; /* Puts it beside classes-wrapper */
 }
