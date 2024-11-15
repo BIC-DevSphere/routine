@@ -270,10 +270,24 @@ function fetchSchedule(selectedButton) {
 }
 
 
-function showDetailsModal(){
-  document.querySelector(".main-content-wrapper").classList.add("details-visible")
-  let closeBtn = document.querySelector(".close-button")
-  closeBtn.addEventListener("click", ()=>{
-    document.querySelector(".main-content-wrapper").classList.remove("details-visible")
-  })
+function showDetailsModal() {
+  const detailedCard = document.querySelector(".detailed-card");
+  const closeBtn = document.querySelector(".close-button");
+  const mainContentWrapper = document.querySelector(".main-content-wrapper");
+
+  // Show the detailed card
+  mainContentWrapper.classList.add("details-visible");
+
+  // Add event listener to close the modal
+  closeBtn.addEventListener("click", () => {
+    // First, add a 'closing' class to trigger the transition
+    detailedCard.classList.add("closing");
+
+    // After the transition ends (0.3s), hide the card and reset the state
+    setTimeout(() => {
+      detailedCard.classList.remove("closing");
+      mainContentWrapper.classList.remove("details-visible");
+    }, 300); // Match the duration of the transition
+  });
 }
+
