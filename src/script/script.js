@@ -1,6 +1,6 @@
 import { scheduleData } from "./routine-data.js";
 let selectedGroup = null;
-document.querySelector(".dark-toggle").addEventListener("click",toggleTheme)
+document.querySelector(".dark-toggle").addEventListener("click", toggleTheme);
 function toggleTheme() {
   document.body.classList.toggle("dark");
 }
@@ -48,6 +48,7 @@ document.querySelectorAll(".btn-day").forEach((btn) => {
     fetchSchedule(selectedDay, selectedGroup);
   });
 });
+let filteredData = [];
 function setActive(selectedBtn) {
   let activeClassNames = [
     "text-blue-600",
@@ -61,11 +62,24 @@ function setActive(selectedBtn) {
   });
   selectedBtn.classList.add(...activeClassNames);
 }
+let classContainer = document.querySelector(".classes-wrapper");
+// Event delegation: Added a single event listener to classContainer
+classContainer.addEventListener("click", (e) => {
+  // Check if the clicked element has the 'view-more' class
+  if (e.target.classList.contains("view-more")) {
+    // console.log("Clicked button:", e.target);
+    const classesCard = e.target.closest(".classes-card");
+    // const moduleTitle = classesCard.dataset.moduleTitle;
+    const moduleCode = classesCard.dataset.moduleCode;
+    // const moduleTitle = classesCard.dataset.moduleTitle;
+    // Toggle class to show detailed view
+    showDetailsModal(moduleCode);
+  }
+  // });
+});
 function fetchSchedule(selectedDay, selectedGroup) {
-  let classContainer = document.querySelector(".classes-wrapper");
   // Clear existing content to prevent duplicate elements
   classContainer.innerHTML = "";
-
   // let required = scheduleData[selectedDay].filter((dat) =>
   //   dat.Group.includes(selectedGroup),
   // );
@@ -98,19 +112,24 @@ function fetchSchedule(selectedDay, selectedGroup) {
   // });
   Object.entries(scheduleData).forEach(([day, data]) => {
     if (day == selectedDay) {
-      let filteredData = data.filter((dat) =>
-        dat.Group.includes(selectedGroup),
-      );
+      filteredData = data.filter((dat) => dat.Group.includes(selectedGroup));
+
       filteredData.forEach((dat) => {
         let newData = document.createElement("div");
         newData.classList.add(
           "classes-card",
           "flex",
-          "justify-between",
-          "p-2",
-          "items-center",
           "w-full",
+          "items-center",
+          "justify-between",
+          "rounded-md",
           "p-4",
+          "shadow-md",
+          "border-l-4",
+          "border-l-green-400",
+          "pl-2",
+          "gap-2",
+          "md:gap-0",
         );
 
         newData.innerHTML = `
@@ -123,46 +142,53 @@ function fetchSchedule(selectedDay, selectedGroup) {
                 />
               </div>
               <div class="info">
-                <div class="main-class-info flex gap-4 items-center">
+                <div class="main-class-info flex flex-col-reverse md:flex-row items-center gap-1 md:gap-3 lg:gap-4">
                   <p class="text-sm font-semibold md:text-base">
                     ${dat["Module Title"]}
                   </p>
-                  <div class="class-code text-xs bg-green-200 py-1 px-3 rounded-full text-gray-600">
+                  <div class="self-start class-code text-xs bg-green-200 py-1 px-3 rounded-full text-gray-600">
                     ${dat["Module Code"]}
                   </div>
                 </div>
-                <p class="text-xs text-gray-400">${dat.Time}</p>
+                <div class="time-info flex items-center gap-2 p-1">
+                  <i class="fa-regular fa-clock"></i>
+                  <p class="text-xs text-gray-400">${dat.Time}</p>
+                </div>
               </div>
             </div>
             <div class="card-right">
-              <button class="hover:text-blue-400 hover:underline text-sm view-more">View More</button>
+              <button class="hover:text-blue-400 hover:underline md:text-sm text-xs view-more">View More</button>
             </div>
         `;
-
+        // newData.dataset.moduleTitle = dat["Module Title"];
+        newData.dataset.moduleCode = dat["Module Code"];
+        // newData.dataset.time = dat.Time;
         classContainer.appendChild(newData);
       });
     }
   });
-  // Event delegation: Add a single event listener to classContainer
-  classContainer.addEventListener("click", (e) => {
-    // Check if the clicked element has the 'view-more' class
-    if (e.target.classList.contains("view-more")) {
-      console.log("Clicked button:", e.target);
-
-      // Toggle class to show detailed view
-      showDetailsModal();
-    }
-    // });
-  });
 }
 
-function showDetailsModal() {
+function showDetailsModal(code) {
   let mainContainer = document.querySelector(".main-content-wrapper");
   let detailedCard = document.querySelector(".detailed-card");
-
-  // Add the 'details-visible' class to show the detailed card
+  let req = filteredData.find((dat) => dat["Module Code"] == code);
+  console.log(req);
+  let moduleTitle = document.querySelector(".card-module-title");
+  let moduleCode = document.querySelector(".card-code-info");
+  let cardGroupInfo = document.querySelector(".card-group-info");
+  let lecturerName = document.querySelector(".card-lecturer-name");
+  let roomName = document.querySelector(".card-room-right");
+  let classTime = document.querySelector(".card-time-right");
+  moduleTitle.textContent = req["Module Title"];
+  moduleCode.textContent = req["Module Code"];
+  cardGroupInfo.textContent = req["Group"];
+  lecturerName.textContent = req["Lecturer"];
+  roomName.textContent = req.Room;
+  classTime.textContent = req.Time;
+  // console.log("hello");
   mainContainer.classList.add("details-visible");
-
+  // console.log(code);
   // Remove 'closing' class to allow for smooth transition
   detailedCard.classList.remove("closing");
 
@@ -188,4 +214,3 @@ groupsBtn.forEach((btn) => {
     fetchSchedule("SUN", selectedGroup);
   });
 });
-
