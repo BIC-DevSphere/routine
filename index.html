@@ -82,7 +82,7 @@
         </button>
       </div>
     </nav>
-    <main class="flex flex-col justify-center gap-10 bg-white px-4 py-2">
+    <main class="flex flex-col justify-center gap-8 bg-white px-4 py-2">
       <div class="main-title mt-5 flex flex-col items-center gap-10">
         <p class="text-center text-xl font-semibold">Select Your Class Group</p>
         <p class="text-sm font-normal">
@@ -206,10 +206,11 @@
         </ul>
       </div>
       <div class="main-content-wrapper flex">
-        <div class="classes-wrapper flex w-full flex-grow flex-col gap-4 md:w-3/4 lg:w-1/2"
+        <div
+          class="classes-wrapper flex w-full flex-grow flex-col gap-4 md:w-3/4 lg:w-1/2"
         >
           <div
-            class="classes-card flex w-full items-center justify-between p-4"
+            class="classes-card flex w-full items-center justify-between gap-2 rounded-md border-l-4 border-l-green-400 bg-slate-50 p-4 pl-2 shadow-md md:gap-0"
           >
             <div class="card-left flex flex-grow items-center gap-6">
               <div class="card-cover">
@@ -220,21 +221,31 @@
                 />
               </div>
               <div class="info">
-                <div class="main-class-info flex gap-4 items-center">
+                <div
+                  class="main-class-info flex flex-col-reverse items-center gap-1 md:flex-row md:gap-3 lg:gap-4"
+                >
                   <p class="text-sm font-semibold md:text-base">
                     Fundamentals of Computing
                   </p>
-                  <div class="class-code text-xs bg-green-200 py-1 px-3 rounded-full text-gray-600">
+                  <div
+                    class="class-code self-start rounded-full bg-green-200 px-3 py-1 text-xs text-gray-600 md:self-center"
+                  >
                     4CS501
                   </div>
                 </div>
-                <p class="text-xs text-gray-400">10:00 - 12:00PM</p>
+                <div class="time-info flex items-center gap-2 p-1">
+                  <i class="fa-regular fa-clock"></i>
+                  <p class="text-xs text-gray-400">10:00 - 12:00PM</p>
+                </div>
               </div>
             </div>
             <div class="card-right">
-              <a href="" class="text-sm hover:text-blue-400 hover:underline"
-                >View More</a
+              <button
+                href=""
+                class="text-xs hover:text-blue-400 hover:underline md:text-sm"
               >
+                View More
+              </button>
             </div>
           </div>
         </div>
@@ -246,16 +257,28 @@
             <i class="fa-solid fa-circle-xmark fa-2xl cursor-pointer"></i>
           </div>
           <div class="card-container px-10 py-10">
-            <h1 class="mb-3 text-3xl font-bold">Fundamentals of Computing</h1>
+            <div class="card-container-header border-b-2 pb-5">
+              <h1 class="card-module-title mb-3 text-2xl font-bold">
+                Fundamentals of Computing
+              </h1>
 
-            <div class="class-module-code flex gap-6">
-              <h3 class="rounded-full bg-green-400 px-5 py-1">4CS015</h3>
-              <h3 class="rounded-full bg-green-400 px-5 py-1">L4CG2</h3>
+              <div class="card-extra-info flex gap-6">
+                <div
+                  class="card-code-info rounded-full bg-green-300 px-5 py-1 text-sm text-gray-700"
+                >
+                  4CS015
+                </div>
+                <div
+                  class="card-group-info rounded-full bg-green-300 px-5 py-1 text-sm text-gray-700"
+                >
+                  L4CG2
+                </div>
+              </div>
             </div>
 
             <div class="lecturer-title">
               <h2
-                class="mb-9 mt-14 rounded-full bg-green-400 py-2 text-center text-xl"
+                class="mb-9 mt-14 rounded-2xl border-2 border-gray-600 py-2 text-center text-xl text-gray-700"
               >
                 Lecturer Info
               </h2>
@@ -289,26 +312,28 @@
               </div>
 
               <div class="info-section content-center space-y-3">
-                <div class="name-container flex gap-1">
-                  <div class="name-left">Name:</div>
-                  <div class="name-right">Mr. Sanjeev Chamling</div>
+                <div class="card-name-container flex gap-1">
+                  <div class="card-name-left">Name:</div>
+                  <div class="card-lecturer-name">Mr. Sanjeev Chamling</div>
                 </div>
 
                 <div class="class-type-container flex items-center gap-1">
-                  <div class="class-type-left">Class Type:</div>
-                  <div class="class-type-left rounded-full bg-green-400 px-3">
+                  <div class="card-class-type-left">Class Type:</div>
+                  <div
+                    class="card-class-type-left rounded-full bg-green-400 px-3"
+                  >
                     Yellow
                   </div>
                 </div>
 
-                <div class="time-container flex gap-1">
-                  <div class="time-ccontainer-left">Time:</div>
-                  <div class="time-ccontainer-right">00:00 - 00:00</div>
+                <div class="card-time-container flex gap-1">
+                  <div class="card-time-left">Time:</div>
+                  <div class="card-time-right">00:00 - 00:00</div>
                 </div>
 
-                <div class="room-container flex gap-1">
-                  <div class="room-container-left">Room:</div>
-                  <div class="room-container-right">L012783</div>
+                <div class="card-room-container flex gap-1">
+                  <div class="card-room-left">Room:</div>
+                  <div class="card-room-right">L012783</div>
                 </div>
               </div>
             </div>
