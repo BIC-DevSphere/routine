@@ -139,9 +139,6 @@ function fetchSchedule(selectedDay, selectedGroup) {
             </div>
         `;
 
-
-        
-
         classContainer.appendChild(newData);
       });
     }
