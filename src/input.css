@@ -16,7 +16,7 @@
 /* When details-visible class is applied, bring detailed card into view */
 .details-visible .detailed-card {
   transform: translateX(0); /* Bring it into view */
-  width: 50%; /* Adjust width */
+  width: 30%; /* Adjust width */
   position: relative;
 }
 
@@ -25,3 +25,9 @@
   transform: translateX(100vw); /* Transition back off-screen */
   transition: transform 0.3s ease; /* Ensure smooth transition */
 }
+
+/* Ensure the classes-wrapper width transition works seamlessly */
+.details-visible .classes-wrapper {
+  width: 50%;
+}
+

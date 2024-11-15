@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="font-pop overflow-x-hidden">
+  <body class="overflow-x-hidden font-pop">
     <!-- <table class="w-full text-sm text-left  rtl:text-right text-gray-500 dark:text-gray-400">
       <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
         <th class="px-6 py-4">Time</th>
@@ -57,8 +57,7 @@
       </div>
       <div class="nav-right">
         <button
-          onclick="toggleTheme()"
-          class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+          class="dark-toggle h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
         >
           <svg
             class="block fill-violet-700 dark:hidden"
@@ -126,7 +125,7 @@
             <div class="py-1" role="none">
               <button
                 type="submit"
-                class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
+                class="class-groups-btn block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
                 role="menuitem"
                 tabindex="-1"
                 id="menu-item-3"
@@ -135,7 +134,7 @@
               </button>
               <button
                 type="submit"
-                class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
+                class="class-groups-btn block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
                 role="menuitem"
                 tabindex="-1"
                 id="menu-item-3"
@@ -144,24 +143,22 @@
               </button>
               <button
                 type="submit"
-                class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
+                class="class-groups-btn block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
                 role="menuitem"
                 tabindex="-1"
                 id="menu-item-3"
               >
                 L4CG3
               </button>
-              <form method="POST" action="#" role="none">
-                <button
-                  type="submit"
-                  class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
-                  role="menuitem"
-                  tabindex="-1"
-                  id="menu-item-3"
-                >
-                  L4CG4
-                </button>
-              </form>
+              <button
+                type="submit"
+                class="class-groups-btn block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-50 dark:hover:text-gray-700"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-item-3"
+              >
+                L4CG4
+              </button>
             </div>
           </div>
         </div>
@@ -210,7 +207,7 @@
       </div>
       <div class="main-content-wrapper flex">
         <div
-          class="classes-wrapper flex w-full flex-col gap-4 md:w-3/4 lg:w-1/2 flex-grow"
+          class="classes-wrapper flex w-full flex-grow flex-col gap-4 md:w-3/4 lg:w-1/2"
         >
           <div
             class="classes-card flex w-full items-center justify-between p-4"
@@ -224,9 +221,14 @@
                 />
               </div>
               <div class="info">
-                <p class="text-sm font-semibold md:text-base">
-                  Fundamentals of Computing
-                </p>
+                <div class="main-class-info flex gap-4 items-center">
+                  <p class="text-sm font-semibold md:text-base">
+                    Fundamentals of Computing
+                  </p>
+                  <div class="class-code text-xs bg-green-200 py-1 px-3 rounded-full text-gray-600">
+                    4CS501
+                  </div>
+                </div>
                 <p class="text-xs text-gray-400">10:00 - 12:00PM</p>
               </div>
             </div>
@@ -315,6 +317,6 @@
         </div>
       </div>
     </main>
-    <script src="src/script/script.js"></script>
+    <script src="src/script/script.js" type="module"></script>
   </body>
 </html>
