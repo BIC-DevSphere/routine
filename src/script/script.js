@@ -187,21 +187,28 @@ function showDetailsModal(code) {
   roomName.textContent = req.Room;
   classTime.textContent = req.Time;
   // console.log("hello");
-  mainContainer.classList.add("details-visible");
+  if (window.innerWidth <= 768) {
+    detailedCard.style.display = "block"; // Show as popup modal
+  } else {
+    mainContainer.classList.add("details-visible"); // Slide-in behavior
+  }
+  // mainContainer.classList.add("details-visible");
   // console.log(code);
   // Remove 'closing' class to allow for smooth transition
   detailedCard.classList.remove("closing");
 
   let closeBtn = document.querySelector(".close-button");
   closeBtn.addEventListener("click", () => {
-    // Add 'closing' class to trigger the close transition (move back off-screen)
-    detailedCard.classList.add("closing");
-
-    // Set a timeout to ensure the closing transition completes before removing the modal
-    setTimeout(() => {
-      // Remove 'details-visible' class to hide the modal after transition
-      mainContainer.classList.remove("details-visible");
-    }, 300); // Duration matches the CSS transition duration
+    if (window.innerWidth <= 768) {
+      setTimeout(() => {
+        detailedCard.style.display = "none"; // Hide modal for mobile
+      }, 300);
+      detailedCard.classList.add("closing");
+    } else {
+      setTimeout(() => {
+        mainContainer.classList.remove("details-visible");
+      }, 300);
+    }
   });
 }
 
