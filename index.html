@@ -17,37 +17,6 @@
     ></script>
   </head>
   <body class="overflow-x-hidden font-pop">
-    <!-- <table class="w-full text-sm text-left  rtl:text-right text-gray-500 dark:text-gray-400">
-      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-        <th class="px-6 py-4">Time</th>
-        <th class="px-6 py-4">Type</th>
-        <th class="px-6 py-4">Code</th>
-        <th class="px-6 py-4">Title</th>
-        <th class="px-6 py-4">Lecturer</th>
-        <th class="px-6 py-4">Group</th>
-        <th class="px-6 py-4">Room</th>
-      </thead>
-      <tbody class="container">
-        <tr
-          class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700"
-        >
-          <th
-            scope="row"
-            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-          >
-            Apple MacBook Pro 17"
-          </th>
-          <td class="px-6 py-4">Silver</td>
-          <td class="px-6 py-4">Laptop</td>
-          <td class="px-6 py-4">$2999</td>
-          <td class="px-6 py-4">
-            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-              >Edit</a
-            >
-          </td>
-        </tr>
-      </tbody>
-    </table> -->
     <nav
       class="flex items-center justify-between border-b border-gray-400 bg-white px-6 py-3 dark:bg-gray-900"
     >
@@ -258,18 +227,18 @@
           </div>
           <div class="card-container px-10 py-10">
             <div class="card-container-header border-b-2 pb-5">
-              <h1 class="card-module-title mb-3 text-2xl font-bold">
+              <h1 class="card-module-title mb-3 text-xl font-bold md:text-2xl">
                 Fundamentals of Computing
               </h1>
 
               <div class="card-extra-info flex gap-6">
                 <div
-                  class="card-code-info rounded-full bg-green-300 px-5 py-1 text-sm text-gray-700"
+                  class="card-code-info rounded-full bg-green-300 px-5 py-1 text-xs text-gray-700 md:text-sm"
                 >
                   4CS015
                 </div>
                 <div
-                  class="card-group-info rounded-full bg-green-300 px-5 py-1 text-sm text-gray-700"
+                  class="card-group-info rounded-full bg-green-300 px-5 py-1 text-xs text-gray-700 md:text-sm"
                 >
                   L4CG2
                 </div>
@@ -285,7 +254,7 @@
             </div>
 
             <div
-              class="lecturer-details grid grid-cols-[repeat(1,2fr_3fr)] items-center gap-x-7"
+              class="lecturer-details grid items-center gap-4 gap-x-7 md:grid-cols-[repeat(1,2fr_3fr)]"
             >
               <div class="contact-section space-y-7 justify-self-center">
                 <div
@@ -311,13 +280,13 @@
                 </div>
               </div>
 
-              <div class="info-section content-center space-y-3">
-                <div class="card-name-container flex gap-1">
+              <div class="info-section content-center space-y-3 p-2 md:p-1">
+                <div class="card-name-container flex md:gap-1.5 gap-2">
                   <div class="card-name-left">Name:</div>
                   <div class="card-lecturer-name">Mr. Sanjeev Chamling</div>
                 </div>
 
-                <div class="class-type-container flex items-center gap-1">
+                <div class="class-type-container flex items-center md:gap-1.5 gap-2">
                   <div class="card-class-type-left">Class Type:</div>
                   <div
                     class="card-class-type-left rounded-full bg-green-400 px-3"
@@ -326,12 +295,12 @@
                   </div>
                 </div>
 
-                <div class="card-time-container flex gap-1">
+                <div class="card-time-container flex md:gap-1.5 gap-2">
                   <div class="card-time-left">Time:</div>
                   <div class="card-time-right">00:00 - 00:00</div>
                 </div>
 
-                <div class="card-room-container flex gap-1">
+                <div class="card-room-container flex md:gap-1.5 gap-2">
                   <div class="card-room-left">Room:</div>
                   <div class="card-room-right">L012783</div>
                 </div>
