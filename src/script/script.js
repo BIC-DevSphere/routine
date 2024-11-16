@@ -4,7 +4,8 @@ let extraDatas = {
   "4CS001": {
     image: "src/assets/problem-solving.svg",
     teacher: {
-      profile: "",
+      profile:
+        "https://media.licdn.com/dms/image/v2/D5603AQFpq7pF1WZ8eQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1731638117889?e=2147483647&v=beta&t=bhdiDgD9sxpU0rjOijlMACbIVyAJ4Jx048Hjre0-TeY",
       socials: {
         linkedIn:
           "https://www.linkedin.com/in/basanta-singh-2583a01a5/?originalSubdomain=np",
@@ -16,7 +17,8 @@ let extraDatas = {
   "4CS017": {
     image: "src/assets/database.svg",
     teacher: {
-      profile: "",
+      profile:
+        "https://media.licdn.com/dms/image/v2/D4D03AQFDMnMR7seFoA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1711811705309?e=2147483647&v=beta&t=mqsIBc6TbgmshhJZrdte8N-XlCQ4RzMceE1d2_0FOgQ",
       socials: {
         linkedIn:
           "https://www.linkedin.com/in/arvind-nepal-679b52280/?originalSubdomain=np",
@@ -28,7 +30,8 @@ let extraDatas = {
   "4CS015": {
     image: "src/assets/programming.svg",
     teacher: {
-      profile: "",
+      profile:
+        "https://media.licdn.com/dms/image/v2/C4D03AQEUePfQzGIU_w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1517364493894?e=2147483647&v=beta&t=2rshFgOi9S5t2y7-w5FPOn0RiNlT6Ia-jsYq0ckyVLY",
       socials: {
         linkedIn:
           "https://www.linkedin.com/in/sanjeev-rai-abab20135?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -275,6 +278,10 @@ function updateDetailsModal(requiredData, code) {
   linkGithub.href = extraDatas[code].teacher.socials.github;
   linkLinkedIn.href = extraDatas[code].teacher.socials.linkedIn;
   linkEmail.href = extraDatas[code].teacher.socials.email;
+  let teacherImage = document.querySelector(".teacher-image");
+  teacherImage.src = extraDatas[code].teacher.profile;
+  let classTypeInfo = document.querySelector(".card-class-type-right");
+  classTypeInfo.textContent = requiredData["Class Type"];
 }
 
 function alertMessagePop() {
