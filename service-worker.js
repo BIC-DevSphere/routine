@@ -1,4 +1,4 @@
-const CACHE_NAME = "routine-cache-v2"; // Increment the version number for new deployments
+const CACHE_NAME = "routine-cache-v3"; // Increment the version number for new deployments
 const urlsToCache = [
   "/",
   "/index.html",
@@ -19,7 +19,7 @@ self.addEventListener("install", (event) => {
       return cache.addAll(urlsToCache).catch((error) => {
         console.error("Failed to cache:", error);
       });
-    }),
+    })
   );
 });
 
@@ -29,26 +29,20 @@ self.addEventListener("fetch", (event) => {
       if (response) {
         return response;
       }
-      return fetch(event.request)
-        .then((networkResponse) => {
-          if (
-            !networkResponse ||
-            networkResponse.status !== 200 ||
-            networkResponse.type !== "basic"
-          ) {
-            return networkResponse;
-          }
-          const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseToCache);
-          });
+      return fetch(event.request).then((networkResponse) => {
+        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== "basic") {
           return networkResponse;
-        })
-        .catch(() => {
-          // Fallback to cache if network request fails
-          return caches.match(event.request);
+        }
+        const responseToCache = networkResponse.clone();
+        caches.open(CACHE_NAME).then((cache) => {
+          cache.put(event.request, responseToCache);
         });
-    }),
+        return networkResponse;
+      }).catch(() => {
+        // Fallback to cache if network request fails
+        return caches.match(event.request);
+      });
+    })
   );
 });
 
@@ -61,8 +55,10 @@ self.addEventListener("activate", (event) => {
           if (!cacheWhitelist.includes(cacheName)) {
             return caches.delete(cacheName);
           }
-        }),
+        })
       );
-    }),
+    })
   );
+  // Claim clients to ensure the new service worker takes control immediately
+  return self.clients.claim();
 });
