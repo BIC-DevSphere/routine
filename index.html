@@ -51,12 +51,17 @@
         </button>
       </div>
     </nav>
-    <main class="flex flex-col justify-center gap-8 bg-white px-4 py-2">
-      <div class="main-title mt-5 flex flex-col items-center gap-10">
-        <p class="text-center text-xl font-semibold">Select Your Class Group</p>
-        <p class="text-sm font-normal">
+    <main
+      class="flex h-full flex-col gap-8 bg-white px-4 py-2 dark:bg-gray-900"
+    >
+      <div class="main-title mt-5 flex flex-col items-center gap-10 py-4">
+        <h1 class="text-2xl font-bold tracking-wide">BIC Routine A24 CS</h1>
+        <p class="text-center text-base font-semibold">
+          Select Your Class Group
+        </p>
+        <p class="display-group text-center text-sm font-normal">
           Your are currently viewing schedule of Group
-          <span class="display-group">L4CG1</span>
+          <!-- <span class="display-group">L4CG1</span> -->
         </p>
         <div class="relative inline-block text-left">
           <div>
@@ -136,7 +141,7 @@
         class="mt-10 border-b border-gray-200 text-center text-sm font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400"
       >
         <ul
-          class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
+          class="grid grid-cols-[repeat(auto-fit,_minmax(100px,_1fr))] gap-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6"
         >
           <li class="me-2">
             <button href="#" class="btn-day inline-block rounded-t-lg p-4">
@@ -186,7 +191,7 @@
                 <img
                   src="https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7496.jpg?t=st=1731552894~exp=1731556494~hmac=3a7078b16ed6f5da6d567ded90c1335d41475639666a146e65a0e40b6257c71d&w=826 "
                   alt=""
-                  class="h-12 w-14 rounded-lg object-cover shadow-lg md:h-14 md:w-16 lg:h-16 lg:w-20"
+                  class="h-12 w-14 rounded-lg object-contain shadow-xl md:h-14 md:w-16 lg:h-16 lg:w-20"
                 />
               </div>
               <div class="info">
@@ -268,25 +273,36 @@
                 </div>
 
                 <div class="links flex justify-between">
-                  <a class="transition-transform hover:scale-125" href=""
+                  <a
+                    class="link-github transition-transform hover:scale-125"
+                    href=""
+                    target="_blank"
                     ><i class="fa-brands fa-github fa-xl"></i
                   ></a>
-                  <a class="transition-transform hover:scale-125" href=""
+                  <a
+                    class="link-linkedin transition-transform hover:scale-125"
+                    href=""
+                    target="_blank"
                     ><i class="fa-brands fa-linkedin fa-xl"></i
                   ></a>
-                  <a class="transition-transform hover:scale-125" href=""
+                  <a
+                    class="link-email transition-transform hover:scale-125"
+                    href=""
+                    target="_blank"
                     ><i class="fa-solid fa-envelope fa-xl"></i
                   ></a>
                 </div>
               </div>
 
               <div class="info-section content-center space-y-3 p-2 md:p-1">
-                <div class="card-name-container flex md:gap-1.5 gap-2">
+                <div class="card-name-container flex gap-2 md:gap-1.5">
                   <div class="card-name-left">Name:</div>
                   <div class="card-lecturer-name">Mr. Sanjeev Chamling</div>
                 </div>
 
-                <div class="class-type-container flex items-center md:gap-1.5 gap-2">
+                <div
+                  class="class-type-container flex items-center gap-2 md:gap-1.5"
+                >
                   <div class="card-class-type-left">Class Type:</div>
                   <div
                     class="card-class-type-left rounded-full bg-green-400 px-3"
@@ -295,12 +311,12 @@
                   </div>
                 </div>
 
-                <div class="card-time-container flex md:gap-1.5 gap-2">
+                <div class="card-time-container flex gap-2 md:gap-1.5">
                   <div class="card-time-left">Time:</div>
                   <div class="card-time-right">00:00 - 00:00</div>
                 </div>
 
-                <div class="card-room-container flex md:gap-1.5 gap-2">
+                <div class="card-room-container flex gap-2 md:gap-1.5">
                   <div class="card-room-left">Room:</div>
                   <div class="card-room-right">L012783</div>
                 </div>
