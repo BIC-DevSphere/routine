@@ -170,7 +170,7 @@ function populateScheduleCards(selectedDay, selectedGroup) {
     let randomColor = getRandomColor();
     newData.classList.add(`border-l-${randomColor}`); // Adding random border colour
     newData.innerHTML = `
-        <div class="card-left flex flex-grow items-center gap-6">
+        <div class="card-left flex flex-grow items-center gap-6 dark:text-white">
               <div class="card-cover">
                 <img
                   src="${extraDatas[data["Module Code"]].image}"

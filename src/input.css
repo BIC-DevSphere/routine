@@ -2,34 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+/* Apply global transitions only to elements that truly need them */
+body, .detailed-card, .classes-wrapper {
   @apply transition-colors duration-200;
 }
-html,body{
+
+/* Remove transition for text color inside classes-card */
+.classes-card {
+  color: inherit; /* Ensure text respects the current theme */
+  transition: background-color 0.2s ease, border-color 0.2s ease; /* Only transition non-text properties */
+}
+
+/* Avoid delays for child elements inside classes-card */
+.classes-card * {
+  transition: none; /* Disable transitions for inner elements */
+}
+
+/* Other styles remain unchanged */
+html, body {
   height: 100%;
   width: 100%;
 }
-/* Initial state for detailed card - off-screen */
+
 .detailed-card {
   position: absolute;
   transform: translateX(100vw); /* Initially off-screen */
   transition: transform 0.3s ease; /* Smooth transition */
 }
 
-/* When details-visible class is applied, bring detailed card into view */
 .details-visible .detailed-card {
   transform: translateX(0); /* Bring it into view */
   width: 30%; /* Adjust width */
   position: relative;
 }
 
-/* When closing, temporarily move the card back */
 .detailed-card.closing {
   transform: translateX(100vw); /* Transition back off-screen */
   transition: transform 0.3s ease; /* Ensure smooth transition */
 }
 
-/* Ensure the classes-wrapper width transition works seamlessly */
 .details-visible .classes-wrapper {
   width: 50%;
 }
@@ -51,4 +62,75 @@ html,body{
     display: none; /* Always visible on mobile */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
+}
+
+/* From Uiverse.io by shah1345 */ 
+#install-button {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: absolute;
+  top: 12px;
+  right: 90px;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+#install-button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+#install-button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+#install-button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #009087;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+#install-button:hover {
+  color: #ffffff;
+  border: 1px solid #009087;
+}
+
+#install-button:hover:before {
+  top: -35%;
+  background-color: #009087;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+#install-button:hover:after {
+  top: -45%;
+  background-color: #009087;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
