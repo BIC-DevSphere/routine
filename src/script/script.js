@@ -82,6 +82,7 @@ groupsBtn.forEach((btn) => {
     setActive(document.querySelector(".btn-day")); // Sets the sunday tab button to active state
     updateSelectedGroupInfoDisplay(selectedGroup);
     populateScheduleCards("SUN", selectedGroup);
+    hideAlertMessage();
   });
 });
 function updateSelectedGroupInfoDisplay(selectedGroup) {
@@ -101,6 +102,7 @@ document.querySelectorAll(".btn-day").forEach((btn) => {
     let selectedDay = e.target.textContent.trim().slice(0, 3).toUpperCase();
     if (selectedGroup == null) {
       console.warn("SELECT GROUP YOU FOOL");
+      alertMessagePop();
     } else {
       populateScheduleCards(selectedDay, selectedGroup);
     }
@@ -257,3 +259,27 @@ function updateDetailsModal(requiredData, code) {
   linkLinkedIn.href = extraDatas[code].teacher.socials.linkedIn;
   linkEmail.href = extraDatas[code].teacher.socials.email;
 }
+
+function alertMessagePop() {
+  const alertMessage = document.querySelector(".alert-message");
+  const closeAlert = document.querySelector("#alert-3 button");
+  alertMessage.classList.remove("hidden");
+  // setTimeout(() => {
+  //   alertMessage.classList.add("hidden");
+  // }, 1500);
+    closeAlert.addEventListener("click", () => {
+      // alertMessage.classList.add("hidden");
+      hideAlertMessage()
+    });
+}
+
+function hideAlertMessage(){
+  const alertMessage = document.querySelector(".alert-message");
+  const closeAlert = document.querySelector("#alert-3 button");
+  closeAlert.addEventListener("click", () => {
+    alertMessage.classList.add("hidden");
+  });
+  alertMessage.style.display = "none"
+}
+
+
