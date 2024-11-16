@@ -5,7 +5,10 @@
 * {
   @apply transition-colors duration-200;
 }
-
+html,body{
+  height: 100%;
+  width: 100%;
+}
 /* Initial state for detailed card - off-screen */
 .detailed-card {
   position: absolute;

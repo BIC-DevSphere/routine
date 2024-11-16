@@ -1,5 +1,44 @@
-import { scheduleData } from "./routine-data.js";
+import scheduleData from "../../schedule-formatter.js";
 let selectedGroup = null;
+let extraDatas = {
+  "4CS001": {
+    image: "src/assets/problem-solving.svg",
+    teacher: {
+      profile: "",
+      socials: {
+        linkedIn:
+          "https://www.linkedin.com/in/basanta-singh-2583a01a5/?originalSubdomain=np",
+        github: "",
+        email: "",
+      },
+    },
+  },
+  "4CS017": {
+    image: "src/assets/database.svg",
+    teacher: {
+      profile: "",
+      socials: {
+        linkedIn:
+          "https://www.linkedin.com/in/arvind-nepal-679b52280/?originalSubdomain=np",
+        github: "",
+        email: "",
+      },
+    },
+  },
+  "4CS015": {
+    image: "src/assets/programming.svg",
+    teacher: {
+      profile: "",
+      socials: {
+        linkedIn:
+          "https://www.linkedin.com/in/sanjeev-rai-abab20135?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        github: "",
+        email: "",
+      },
+    },
+  },
+};
+
 document.querySelector(".dark-toggle").addEventListener("click", toggleTheme);
 function toggleTheme() {
   document.body.classList.toggle("dark");
@@ -35,17 +74,36 @@ document.addEventListener("click", (event) => {
     dropdownMenu.classList.add("opacity-0", "scale-95");
   }
 });
+// Adds event listener to the classes groups menu button
+let groupsBtn = document.querySelectorAll(".class-groups-btn");
+groupsBtn.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    selectedGroup = e.target.textContent.trim();
+    setActive(document.querySelector(".btn-day")); // Sets the sunday tab button to active state
+    updateSelectedGroupInfoDisplay(selectedGroup);
+    populateScheduleCards("SUN", selectedGroup);
+  });
+});
+function updateSelectedGroupInfoDisplay(selectedGroup) {
+  let selectedGroupInfoDisplay =
+    selectedGroup != null
+      ? `You are currently viewing schedule of Group ${selectedGroup}`
+      : "You haven't selected any group";
+  document.querySelector(".display-group").textContent =
+    selectedGroupInfoDisplay;
+}
+updateSelectedGroupInfoDisplay(selectedGroup);
 document.querySelectorAll(".btn-day").forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    // alert("Hey I am ", e.target);
-    // document.querySelectorAll(".btn-day").forEach((button) => {
-    //   button.classList.remove(...activeClassNames);
-    // });
-    // e.target.classList.add(...activeClassNames);
+    // Changes classes of currently selected tab component
     setActive(e.target);
+    // Retrieves first 3 word from it eg: SUN from Sunday
     let selectedDay = e.target.textContent.trim().slice(0, 3).toUpperCase();
-    console.log("Selected Day:", selectedDay);
-    fetchSchedule(selectedDay, selectedGroup);
+    if (selectedGroup == null) {
+      console.warn("SELECT GROUP YOU FOOL");
+    } else {
+      populateScheduleCards(selectedDay, selectedGroup);
+    }
   });
 });
 let filteredData = [];
@@ -65,135 +123,103 @@ function setActive(selectedBtn) {
 let classContainer = document.querySelector(".classes-wrapper");
 // Event delegation: Added a single event listener to classContainer
 classContainer.addEventListener("click", (e) => {
+  console.log(e.target);
   // Check if the clicked element has the 'view-more' class
   if (e.target.classList.contains("view-more")) {
-    // console.log("Clicked button:", e.target);
     const classesCard = e.target.closest(".classes-card");
-    // const moduleTitle = classesCard.dataset.moduleTitle;
     const moduleCode = classesCard.dataset.moduleCode;
-    // const moduleTitle = classesCard.dataset.moduleTitle;
-    // Toggle class to show detailed view
-    showDetailsModal(moduleCode);
+    // Calls the function when "View More" button is clicked
+    showDetailsModal(moduleCode, filteredData);
   }
   // });
 });
-function fetchSchedule(selectedDay, selectedGroup) {
-  // Clear existing content to prevent duplicate elements
+
+function getRandomColor() {
+  let randomColors = ["yellow-400", "red-400", "green-400", "teal-500"];
+  return randomColors[Math.floor(Math.random() * randomColors.length)];
+}
+function populateScheduleCards(selectedDay, selectedGroup) {
+  // Clears existing content to prevent duplicate elements
   classContainer.innerHTML = "";
-  // let required = scheduleData[selectedDay].filter((dat) =>
-  //   dat.Group.includes(selectedGroup),
-  // );
-  // required.forEach((dat) => {
-  //   // console.log(data);
-  //   // if(day == selectedDay)
-  //   // data.forEach((dat) => {
-  //   let newData = document.createElement("div");
-  //   newData.classList.add(
-  //     "classes-card",
-  //     "flex",
-  //     "justify-between",
-  //     "p-2",
-  //     "items-center",
-  //     "w-full",
-  //     "p-4",
-  //   );
-  //   newData.innerHTML = `
-  //     <div class="card-left flex-grow">
-  //       <div class="info">
-  //         <p class="text-sm md:text-base font-semibold">${dat["Module Title"]}</p>
-  //         <p class="text-xs text-gray-400">${dat.Time}</p>
-  //       </div>
-  //     </div>
-  //     <div class="card-right">
-  //       <button class="hover:text-blue-400 hover:underline text-sm view-more">View More</button>
-  //     </div>
-  //   `;
-  //   classContainer.appendChild(newData);
-  // });
-  Object.entries(scheduleData).forEach(([day, data]) => {
-    if (day == selectedDay) {
-      filteredData = data.filter((dat) => dat.Group.includes(selectedGroup));
+  let newDataClassNames = [
+    "classes-card",
+    "flex",
+    "w-full",
+    "items-center",
+    "justify-between",
+    "rounded-md",
+    "p-4",
+    "shadow-md",
+    "border-l-4",
+    "pl-2",
+    "gap-2",
+    "md:gap-0",
+    "dark:bg-gray-900",
+    "bg-slate-50",
+  ];
+  // Returns array of data of the selected day and group
+  filteredData = scheduleData[selectedDay].filter((dat) =>
+    dat.Group.includes(selectedGroup),
+  );
 
-      filteredData.forEach((dat) => {
-        let newData = document.createElement("div");
-        newData.classList.add(
-          "classes-card",
-          "flex",
-          "w-full",
-          "items-center",
-          "justify-between",
-          "rounded-md",
-          "p-4",
-          "shadow-md",
-          "border-l-4",
-          "border-l-green-400",
-          "pl-2",
-          "gap-2",
-          "md:gap-0",
-        );
-
-        newData.innerHTML = `
-          <div class="card-left flex flex-grow items-center gap-6">
+  filteredData.forEach((data) => {
+    let newData = document.createElement("div");
+    newData.classList.add(...newDataClassNames);
+    let randomColor = getRandomColor();
+    newData.classList.add(`border-l-${randomColor}`); // Adding random border colour
+    newData.innerHTML = `
+        <div class="card-left flex flex-grow items-center gap-6">
               <div class="card-cover">
                 <img
-                  src="https://img.freepik.com/free-vector/computer-troubleshooting-concept-illustration_114360-7496.jpg?t=st=1731552894~exp=1731556494~hmac=3a7078b16ed6f5da6d567ded90c1335d41475639666a146e65a0e40b6257c71d&w=826 "
+                  src="${extraDatas[data["Module Code"]].image}"
                   alt=""
-                  class="h-12 w-14 rounded-lg object-cover shadow-lg md:h-14 md:w-16 lg:h-16 lg:w-20"
+                  class="h-12 w-14 rounded-lg object-contain shadow-xl md:h-14 md:w-16 lg:h-16 lg:w-20"
                 />
               </div>
               <div class="info">
-                <div class="main-class-info flex flex-col-reverse md:flex-row items-center gap-1 md:gap-3 lg:gap-4">
+                <div
+                  class="main-class-info flex flex-col-reverse items-center gap-1 md:flex-row md:gap-3 lg:gap-4"
+                >
                   <p class="text-sm font-semibold md:text-base">
-                    ${dat["Module Title"]}
+                    ${data["Module Title"]}
                   </p>
-                  <div class="self-start class-code text-xs bg-green-200 py-1 px-3 rounded-full text-gray-600">
-                    ${dat["Module Code"]}
+                  <div
+                    class="class-code self-start rounded-full bg-${randomColor} px-3 py-1 text-xs text-white md:self-center"
+                  >
+                    ${data["Module Code"]}
                   </div>
                 </div>
                 <div class="time-info flex items-center gap-2 p-1">
                   <i class="fa-regular fa-clock"></i>
-                  <p class="text-xs text-gray-400">${dat.Time}</p>
+                  <p class="text-xs text-gray-400">${data.Time}</p>
                 </div>
               </div>
             </div>
             <div class="card-right">
-              <button class="hover:text-blue-400 hover:underline md:text-sm text-xs view-more">View More</button>
+              <button
+                href=""
+                class="text-xs hover:text-blue-400 hover:underline md:text-sm view-more"
+              >
+                View More
+              </button>
             </div>
-        `;
-        // newData.dataset.moduleTitle = dat["Module Title"];
-        newData.dataset.moduleCode = dat["Module Code"];
-        // newData.dataset.time = dat.Time;
-        classContainer.appendChild(newData);
-      });
-    }
+    `;
+    newData.dataset.moduleCode = data["Module Code"];
+    classContainer.appendChild(newData);
   });
 }
 
-function showDetailsModal(code) {
+function showDetailsModal(code, filteredData) {
   let mainContainer = document.querySelector(".main-content-wrapper");
   let detailedCard = document.querySelector(".detailed-card");
-  let req = filteredData.find((dat) => dat["Module Code"] == code);
-  console.log(req);
-  let moduleTitle = document.querySelector(".card-module-title");
-  let moduleCode = document.querySelector(".card-code-info");
-  let cardGroupInfo = document.querySelector(".card-group-info");
-  let lecturerName = document.querySelector(".card-lecturer-name");
-  let roomName = document.querySelector(".card-room-right");
-  let classTime = document.querySelector(".card-time-right");
-  moduleTitle.textContent = req["Module Title"];
-  moduleCode.textContent = req["Module Code"];
-  cardGroupInfo.textContent = req["Group"];
-  lecturerName.textContent = req["Lecturer"];
-  roomName.textContent = req.Room;
-  classTime.textContent = req.Time;
-  // console.log("hello");
+  let requiredData = filteredData.find((dat) => dat["Module Code"] == code);
+  // Updates the info inside details modal accordingly
+  updateDetailsModal(requiredData, code);
   if (window.innerWidth <= 768) {
     detailedCard.style.display = "block"; // Show as popup modal
   } else {
     mainContainer.classList.add("details-visible"); // Slide-in behavior
   }
-  // mainContainer.classList.add("details-visible");
-  // console.log(code);
   // Remove 'closing' class to allow for smooth transition
   detailedCard.classList.remove("closing");
 
@@ -203,21 +229,31 @@ function showDetailsModal(code) {
       setTimeout(() => {
         detailedCard.style.display = "none"; // Hide modal for mobile
       }, 300);
-      detailedCard.classList.add("closing");
     } else {
       setTimeout(() => {
         mainContainer.classList.remove("details-visible");
       }, 300);
     }
+    detailedCard.classList.add("closing");
   });
 }
-
-let groupsBtn = document.querySelectorAll(".class-groups-btn");
-groupsBtn.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    selectedGroup = e.target.textContent.trim();
-    setActive(document.querySelector(".btn-day")); // Sets the sunday tab button to active state
-    document.querySelector(".display-group").textContent = selectedGroup;
-    fetchSchedule("SUN", selectedGroup);
-  });
-});
+function updateDetailsModal(requiredData, code) {
+  let moduleTitle = document.querySelector(".card-module-title");
+  let moduleCode = document.querySelector(".card-code-info");
+  let cardGroupInfo = document.querySelector(".card-group-info");
+  let lecturerName = document.querySelector(".card-lecturer-name");
+  let roomName = document.querySelector(".card-room-right");
+  let classTime = document.querySelector(".card-time-right");
+  moduleTitle.textContent = requiredData["Module Title"];
+  moduleCode.textContent = requiredData["Module Code"];
+  cardGroupInfo.textContent = requiredData["Group"];
+  lecturerName.textContent = requiredData["Lecturer"];
+  roomName.textContent = requiredData.Room;
+  classTime.textContent = requiredData.Time;
+  let linkGithub = document.querySelector(".link-github");
+  let linkLinkedIn = document.querySelector(".link-linkedin");
+  let linkEmail = document.querySelector(".link-email");
+  linkGithub.href = extraDatas[code].teacher.socials.github;
+  linkLinkedIn.href = extraDatas[code].teacher.socials.linkedIn;
+  linkEmail.href = extraDatas[code].teacher.socials.email;
+}
