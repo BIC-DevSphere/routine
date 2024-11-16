@@ -38,11 +38,27 @@ let extraDatas = {
     },
   },
 };
-
+// document.addEventListener("DOMContentLoaded", () => {
+//   let userGroup = localStorage.getItem("user-group");
+//   populateScheduleCards("MON", JSON.parse(userGroup),filteredData);
+// });
 document.querySelector(".dark-toggle").addEventListener("click", toggleTheme);
 function toggleTheme() {
-  document.body.classList.toggle("dark");
+  const isDarkMode = document.body.classList.toggle("dark");
+  localStorage.setItem("darkMode", isDarkMode ? "enabled" : "disabled");
 }
+// Function to apply dark mode based on local storage
+// function applyDarkModePreference() {
+//   const darkModePreference = localStorage.getItem("darkMode");
+//   if (darkModePreference === "enabled") {
+//     document.documentElement.classList.add("dark");
+//   } else {
+//     document.documentElement.classList.remove("dark");
+//   }
+// }
+
+// document.addEventListener("DOMContentLoaded", applyDarkModePreference);
+
 const menuButton = document.getElementById("menu-button");
 const dropdownMenu = document.getElementById("dropdown-menu");
 
@@ -132,6 +148,7 @@ classContainer.addEventListener("click", (e) => {
     const moduleCode = classesCard.dataset.moduleCode;
     // Calls the function when "View More" button is clicked
     showDetailsModal(moduleCode, filteredData);
+    console.log("Hello");
   }
   // });
 });
@@ -156,34 +173,33 @@ function populateScheduleCards(selectedDay, selectedGroup) {
     "pl-2",
     "gap-2",
     "md:gap-0",
-    "dark:bg-gray-900",
+    "dark:bg-gray-800",
     "bg-slate-50",
   ];
   // Returns array of data of the selected day and group
   filteredData = scheduleData[selectedDay].filter((dat) =>
     dat.Group.includes(selectedGroup),
   );
-
   filteredData.forEach((data) => {
     let newData = document.createElement("div");
     newData.classList.add(...newDataClassNames);
     let randomColor = getRandomColor();
     newData.classList.add(`border-l-${randomColor}`); // Adding random border colour
     newData.innerHTML = `
-        <div class="card-left flex flex-grow items-center gap-6 dark:text-white">
-              <div class="card-cover">
-                <img
-                  src="${extraDatas[data["Module Code"]].image}"
-                  alt=""
-                  class="h-12 w-14 rounded-lg object-contain shadow-xl md:h-14 md:w-16 lg:h-16 lg:w-20"
-                />
-              </div>
-              <div class="info">
-                <div
-                  class="main-class-info flex flex-col-reverse items-center gap-1 md:flex-row md:gap-3 lg:gap-4"
-                >
-                  <p class="text-sm font-semibold md:text-base">
-                    ${data["Module Title"]}
+          <div class="card-left flex flex-grow items-center gap-6 dark:text-white">
+                <div class="card-cover">
+                  <img
+                    src="${extraDatas[data["Module Code"]].image}"
+                    alt=""
+                    class="h-12 w-14 rounded-lg object-contain shadow-xl md:h-14 md:w-16 lg:h-16 lg:w-20"
+                  />
+                </div>
+                <div class="info">
+                  <div
+                    class="main-class-info flex flex-col-reverse items-center gap-1 md:flex-row md:gap-3 lg:gap-4"
+                  >
+                    <p class="text-sm font-semibold md:text-base">
+                      ${data["Module Title"]}
                   </p>
                   <div
                     class="class-code self-start rounded-full bg-${randomColor} px-3 py-1 text-xs text-white md:self-center"
@@ -215,6 +231,7 @@ function showDetailsModal(code, filteredData) {
   let mainContainer = document.querySelector(".main-content-wrapper");
   let detailedCard = document.querySelector(".detailed-card");
   let requiredData = filteredData.find((dat) => dat["Module Code"] == code);
+  console.log(requiredData);
   // Updates the info inside details modal accordingly
   updateDetailsModal(requiredData, code);
   if (window.innerWidth <= 768) {
@@ -264,22 +281,16 @@ function alertMessagePop() {
   const alertMessage = document.querySelector(".alert-message");
   const closeAlert = document.querySelector("#alert-3 button");
   alertMessage.classList.remove("hidden");
-  // setTimeout(() => {
-  //   alertMessage.classList.add("hidden");
-  // }, 1500);
-    closeAlert.addEventListener("click", () => {
-      // alertMessage.classList.add("hidden");
-      hideAlertMessage()
-    });
+  closeAlert.addEventListener("click", () => {
+    hideAlertMessage();
+  });
 }
 
-function hideAlertMessage(){
+function hideAlertMessage() {
   const alertMessage = document.querySelector(".alert-message");
   const closeAlert = document.querySelector("#alert-3 button");
   closeAlert.addEventListener("click", () => {
     alertMessage.classList.add("hidden");
   });
-  alertMessage.style.display = "none"
+  alertMessage.style.display = "none";
 }
-
-
