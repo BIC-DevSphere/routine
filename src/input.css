@@ -3,25 +3,29 @@
 @tailwind utilities;
 
 /* Apply global transitions only to elements that truly need them */
-body, .detailed-card, .classes-wrapper {
+body,
+.detailed-card,
+.classes-wrapper {
   @apply transition-colors duration-200;
 }
-
-/* Remove transition for text color inside classes-card */
-.classes-card {
-  color: inherit; /* Ensure text respects the current theme */
-  transition: background-color 0.2s ease, border-color 0.2s ease; /* Only transition non-text properties */
-}
-
-/* Avoid delays for child elements inside classes-card */
-.classes-card * {
-  transition: none; /* Disable transitions for inner elements */
-}
-
-/* Other styles remain unchanged */
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
+}
+body.dark {
+  @apply bg-gray-900;
+}
+
+.classes-card {
+  color: inherit;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.classes-card * {
+  transition: none;
 }
 
 .detailed-card {
@@ -31,8 +35,8 @@ html, body {
 }
 
 .details-visible .detailed-card {
-  transform: translateX(0); /* Bring it into view */
-  width: 30%; /* Adjust width */
+  transform: translateX(0);
+  width: 30%;
   position: relative;
 }
 
@@ -64,7 +68,6 @@ html, body {
   }
 }
 
-/* From Uiverse.io by shah1345 */ 
 #install-button {
   display: inline-block;
   transition: all 0.2s ease-in;
@@ -80,12 +83,16 @@ html, body {
   border-radius: 0.5em;
   background: #e8e8e8;
   border: 1px solid #e8e8e8;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  box-shadow:
+    6px 6px 12px #c5c5c5,
+    -6px -6px 12px #ffffff;
 }
 
 #install-button:active {
   color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  box-shadow:
+    inset 4px 4px 12px #c5c5c5,
+    inset -4px -4px 12px #ffffff;
 }
 
 #install-button:before {
