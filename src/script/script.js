@@ -102,6 +102,7 @@ groupsBtn.forEach((btn) => {
     updateSelectedGroupInfoDisplay(selectedGroup);
     populateScheduleCards("SUN", selectedGroup);
     hideAlertMessage();
+    document.querySelector(".menu-btn-text").textContent = selectedGroup;
   });
 });
 function updateSelectedGroupInfoDisplay(selectedGroup) {
