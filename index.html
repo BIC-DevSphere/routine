@@ -29,7 +29,7 @@
       class="flex items-center justify-between border-b border-gray-400 bg-white px-6 py-3 dark:bg-gray-900"
     >
       <div class="nav-left flex items-center gap-3 text-black dark:text-white">
-        <i class="fa-solid fa-book text-base"></i>
+        <i class="fa-solid fa-calendar text-base"></i>
         <p class="text-2xl font-bold tracking-wider">Routine</p>
       </div>
       <div class="nav-right">
@@ -114,9 +114,6 @@
         </h1>
         <p class="text-center text-base font-semibold">
           Select Your Class Group
-        </p>
-        <p class="display-group text-center text-sm font-normal">
-          Your are currently viewing schedule of Group
         </p>
         <div class="relative inline-block text-left">
           <div>
@@ -234,7 +231,7 @@
           </li>
         </ul>
       </div>
-      <div class="main-content-wrapper flex">
+      <div class="main-content-wrapper flex gap-6">
         <div
           class="classes-wrapper flex w-full flex-grow flex-col gap-4 md:w-3/4 lg:w-1/2"
         >
@@ -298,9 +295,9 @@
                   4CS015
                 </div>
                 <div
-                  class="card-group-info rounded-full bg-green-300 px-5 py-1 text-xs text-gray-700 md:text-sm"
+                  class="card-class-type-info rounded-full bg-green-300 px-5 py-1 text-xs text-gray-700 md:text-sm"
                 >
-                  L4CG2
+                  Workshop
                 </div>
               </div>
             </div>
@@ -359,12 +356,8 @@
                 <div
                   class="class-type-container flex items-center gap-2 md:gap-1.5"
                 >
-                  <div class="card-class-type-left">Class Type:</div>
-                  <div
-                    class="card-class-type-right rounded-full bg-green-400 px-3 py-1 text-sm font-light text-white"
-                  >
-                    Yellow
-                  </div>
+                  <div class="card-class-group-left">Group:</div>
+                  <div class="card-class-group-right rounded-full">Yellow</div>
                 </div>
 
                 <div class="card-time-container flex gap-2 md:gap-1.5">

@@ -19,5 +19,5 @@ module.exports = {
     "border-l-teal-500",
   ],
   plugins: [],
-  darkMode: "class",
+  darkMode: "class"
 };
