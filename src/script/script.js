@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       scheduleData[day] = classesForDay;
     });
     let todaysDay = new Date().getDay();
-    selectedGroup = localStorage.getItem("user-group");
+    selectedGroup = localStorage.getItem("user-group") || "L4CG1";
     populateScheduleCards(daysofWeek[todaysDay], selectedGroup);
     document.querySelector(".menu-btn-text").textContent = selectedGroup;
     document.querySelectorAll(".btn-day").forEach((btn) => {
