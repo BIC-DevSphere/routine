@@ -1,6 +1,5 @@
 [
   {
-    "`": "NaN",
     "Day": "SUN",
     "Time": "8 AM to 10 AM",
     "Class Type": "Lecture",
@@ -11,7 +10,6 @@
     "Room": "LT - 01 Wulfurna"
   },
   {
-    "`": "NaN",
     "Day": "SUN",
     "Time": "8 AM to 10:30 AM",
     "Class Type": "Workshop",
@@ -19,10 +17,9 @@
     "Module Title": "Fundamentals of Computing",
     "Lecturer": "Mr. Sanjeev Chamling",
     "Group": "L4CG4",
-    "Room": "LAB - 01 Baraha"
+    "Room": "SR - 01 Wolves"
   },
   {
-    "`": "NaN",
     "Day": "SUN",
     "Time": "11:00 AM to 1:30 PM",
     "Class Type": "Workshop",
@@ -33,7 +30,6 @@
     "Room": "SR - 01 Wolves"
   },
   {
-    "`": "NaN",
     "Day": "SUN",
     "Time": "11:30 AM to 2:00 PM",
     "Class Type": "Workshop",
@@ -44,7 +40,6 @@
     "Room": "SR - 02 Compton"
   },
   {
-    "`": "NaN",
     "Day": "SUN",
     "Time": "12 PM to 2 PM",
     "Class Type": "Lecture",
@@ -55,7 +50,6 @@
     "Room": "LT - 01 Wulfurna"
   },
   {
-    "`": "NaN",
     "Day": "MON",
     "Time": "8 AM to 10 AM",
     "Class Type": "Lecture",
@@ -66,7 +60,6 @@
     "Room": "LT - 01 Wulfurna"
   },
   {
-    "`": "NaN",
     "Day": "MON",
     "Time": "8 AM to 10 AM",
     "Class Type": "Tutorial",
@@ -74,10 +67,9 @@
     "Module Title": "Introductory Programming and Problem Solving",
     "Lecturer": "Mr. Basanta Singh",
     "Group": "L4CG3",
-    "Room": "SR - 01 Wolves"
+    "Room": "LAB - 01 Baraha"
   },
   {
-    "`": "NaN",
     "Day": "MON",
     "Time": "8 AM to 10:30 AM",
     "Class Type": "Workshop",
@@ -85,10 +77,9 @@
     "Module Title": "Internet Software Architecture and Database",
     "Lecturer": "Mr. Arvind Nepal",
     "Group": "L4CG4",
-    "Room": "LAB - 01 Baraha"
+    "Room": "SR - 01 Wolves"
   },
   {
-    "`": "NaN",
     "Day": "MON",
     "Time": "12 PM to 2 PM",
     "Class Type": "Lecture",
@@ -99,7 +90,6 @@
     "Room": "LT - 01 Wulfurna"
   },
   {
-    "`": "NaN",
     "Day": "MON",
     "Time": "11:00 AM to 1:00 PM",
     "Class Type": "Tutorial",
@@ -110,7 +100,6 @@
     "Room": "SR - 01 Wolves"
   },
   {
-    "`": "NaN",
     "Day": "MON",
     "Time": "12:00 PM to 2:30 PM",
     "Class Type": "Workshop",
@@ -121,7 +110,6 @@
     "Room": "SR - 02 Compton"
   },
   {
-    "`": "NaN",
     "Day": "TUE",
     "Time": "8 AM to 10 AM",
     "Class Type": "Lecture",
@@ -132,7 +120,6 @@
     "Room": "LT - 01 Wulfurna"
   },
   {
-    "`": "NaN",
     "Day": "TUE",
     "Time": "8 AM to 10 AM",
     "Class Type": "Tutorial",
@@ -143,7 +130,6 @@
     "Room": "SR - 01 Wolves"
   },
   {
-    "`": "NaN",
     "Day": "TUE",
     "Time": "8 AM to 10 AM",
     "Class Type": "Tutorial",
@@ -151,10 +137,9 @@
     "Module Title": "Introductory Programming and Problem Solving",
     "Lecturer": "Mr. Basanta Singh",
     "Group": "L4CG4",
-    "Room": "LAB - 01 Baraha"
+    "Room": "SR - 02 Compton"
   },
   {
-    "`": "NaN",
     "Day": "TUE",
     "Time": "12 PM to 2 PM",
     "Class Type": "Lecture",
@@ -165,7 +150,6 @@
     "Room": "LT - 01 Wulfurna"
   },
   {
-    "`": "NaN",
     "Day": "WED",
     "Time": "8 AM to 10 AM",
     "Class Type": "Tutorial",
@@ -176,7 +160,6 @@
     "Room": "SR - 01 Wolves"
   },
   {
-    "`": "NaN",
     "Day": "WED",
     "Time": "8 AM to 10:30 AM",
     "Class Type": "Workshop",
@@ -184,10 +167,9 @@
     "Module Title": "Introductory Programming and Problem Solving",
     "Lecturer": "Mr. Basanta Singh",
     "Group": "L4CG1",
-    "Room": "LAB - 01 Baraha"
+    "Room": "SR - 02 Compton"
   },
   {
-    "`": "NaN",
     "Day": "WED",
     "Time": "9 AM to 11 AM",
     "Class Type": "Tutorial",
@@ -195,10 +177,9 @@
     "Module Title": "Internet Software Architecture and Database",
     "Lecturer": "Mr. Arvind Nepal",
     "Group": "L4CG3",
-    "Room": "SR - 02 Compton"
+    "Room": "LAB - 01 Baraha"
   },
   {
-    "`": "NaN",
     "Day": "WED",
     "Time": "11:30 AM to 1:30 PM",
     "Class Type": "Tutorial",
@@ -209,7 +190,6 @@
     "Room": "SR - 01 Wolves"
   },
   {
-    "`": "NaN",
     "Day": "WED",
     "Time": "12 PM to 2 PM",
     "Class Type": "Tutorial",
@@ -220,7 +200,6 @@
     "Room": "LAB - 01 Baraha"
   },
   {
-    "`": "NaN",
     "Day": "THU",
     "Time": "8 AM to 10 AM",
     "Class Type": "Tutorial",
@@ -231,7 +210,6 @@
     "Room": "SR - 01 Wolves"
   },
   {
-    "`": "NaN",
     "Day": "THU",
     "Time": "8 AM to 10 AM",
     "Class Type": "Tutorial",
@@ -239,10 +217,9 @@
     "Module Title": "Internet Software Architecture and Database",
     "Lecturer": "Mr. Arvind Nepal",
     "Group": "L4CG4",
-    "Room": "SR - 02 Compton"
+    "Room": "LAB - 01 Baraha"
   },
   {
-    "`": "NaN",
     "Day": "THU",
     "Time": "8 AM to 10:30 AM",
     "Class Type": "Workshop",
@@ -250,10 +227,9 @@
     "Module Title": "Introductory Programming and Problem Solving",
     "Lecturer": "Mr. Basanta Singh",
     "Group": "L4CG2",
-    "Room": "LAB - 01 Baraha"
+    "Room": "SR - 02 Compton"
   },
   {
-    "`": "NaN",
     "Day": "THU",
     "Time": "11 PM to 1 PM",
     "Class Type": "Tutorial",
@@ -261,10 +237,9 @@
     "Module Title": "Internet Software Architecture and Database",
     "Lecturer": "Mr. Arvind Nepal",
     "Group": "L4CG1",
-    "Room": "SR - 02 Compton"
+    "Room": "LAB - 01 Baraha"
   },
   {
-    "`": "NaN",
     "Day": "THU",
     "Time": "11:30 AM to 2 PM",
     "Class Type": "Workshop",
@@ -272,10 +247,9 @@
     "Module Title": "Introductory Programming and Problem Solving",
     "Lecturer": "Mr. Basanta Singh",
     "Group": "L4CG3",
-    "Room": "LAB - 01 Baraha"
+    "Room": "SR - 02 Compton"
   },
   {
-    "`": "NaN",
     "Day": "FRI",
     "Time": "8 AM to 10:30 AM",
     "Class Type": "Workshop",
@@ -286,7 +260,6 @@
     "Room": "SR - 01 Wolves"
   },
   {
-    "`": "NaN",
     "Day": "FRI",
     "Time": "8 AM to 10:30 AM",
     "Class Type": "Workshop",
@@ -294,10 +267,9 @@
     "Module Title": "Fundamentals of Computing",
     "Lecturer": "Mr. Sanjeev Chamling",
     "Group": "L4CG1",
-    "Room": "LAB - 01 Baraha"
+    "Room": "SR - 02 Compton"
   },
   {
-    "`": "NaN",
     "Day": "FRI",
     "Time": "11:00 AM to 1:30 PM",
     "Class Type": "Workshop",
@@ -308,7 +280,6 @@
     "Room": "LAB - 01 Baraha"
   },
   {
-    "`": "NaN",
     "Day": "FRI",
     "Time": "11:30 AM to 1:30 AM",
     "Class Type": "Tutorial",
@@ -316,10 +287,9 @@
     "Module Title": "Internet Software Architecture and Database",
     "Lecturer": "Mr. Arvind Nepal",
     "Group": "L4CG2",
-    "Room": "SR - 02 Compton"
+    "Room": "LAB - 01 Baraha"
   },
   {
-    "`": "NaN",
     "Day": "FRI",
     "Time": "11:30 AM to 2:00 AM",
     "Class Type": "Workshop",
