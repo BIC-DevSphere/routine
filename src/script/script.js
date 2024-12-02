@@ -22,8 +22,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       scheduleData[day] = classesForDay;
     });
     let getTodaysDay = new Date().getDay();
+    let currentTime = new Date().getHours();
+    // If current time is past 4:00 PM, day will be set to tomorrow's day
+    let todaysDay = currentTime >= 16 ? getTodaysDay + 1 : getTodaysDay;
     // If present day is Saturday, it falls back to Sunday
-    let todaysDay = getTodaysDay === 6 ? 0 : getTodaysDay;
+    todaysDay = todaysDay === 6 ? 0 : todaysDay;
     selectedGroup = localStorage.getItem("user-group") || "L4CG1";
     populateScheduleCards(daysofWeek[todaysDay], selectedGroup);
     document.querySelector(".menu-btn-text").textContent = selectedGroup;
