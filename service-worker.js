@@ -1,4 +1,4 @@
-const CACHE_NAME = "routine-cache-v7"; // Increment the version number for new deployments
+const CACHE_NAME = "routine-cache-v8"; // Increment the version number for new deployments
 const urlsToCache = [
   "/",
   "/index.html",
