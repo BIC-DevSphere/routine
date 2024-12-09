@@ -141,6 +141,16 @@
   },
   {
     "Day": "TUE",
+    "Time": "11 AM - 1 PM",
+    "Class Type": "Tutorial",
+    "Module Code": "4CS001",
+    "Module Title": "Introductory Programming and Problem Solving",
+    "Lecturer": "Mr. Basanta Singh",
+    "Group": "L4CG2",
+    "Room": "LAB - 01 Baraha"
+  },
+  {
+    "Day": "TUE",
     "Time": "12 PM to 2 PM",
     "Class Type": "Lecture",
     "Module Code": "4CS017",
@@ -151,7 +161,7 @@
   },
   {
     "Day": "WED",
-    "Time": "8 AM to 10 AM",
+    "Time": "9 AM to 11 AM",
     "Class Type": "Tutorial",
     "Module Code": "4CS015",
     "Module Title": "Fundamentals of Computing",
@@ -161,7 +171,7 @@
   },
   {
     "Day": "WED",
-    "Time": "8 AM to 10:30 AM",
+    "Time": "7 AM to 9:30 AM",
     "Class Type": "Workshop",
     "Module Code": "4CS001",
     "Module Title": "Introductory Programming and Problem Solving",
@@ -181,16 +191,6 @@
   },
   {
     "Day": "WED",
-    "Time": "11:30 AM to 1:30 PM",
-    "Class Type": "Tutorial",
-    "Module Code": "4CS001",
-    "Module Title": "Introductory Programming and Problem Solving",
-    "Lecturer": "Mr. Basanta Singh",
-    "Group": "L4CG2",
-    "Room": "SR - 01 Wolves"
-  },
-  {
-    "Day": "WED",
     "Time": "12 PM to 2 PM",
     "Class Type": "Tutorial",
     "Module Code": "4CS015",
@@ -231,7 +231,7 @@
   },
   {
     "Day": "THU",
-    "Time": "11 PM to 1 PM",
+    "Time": "11 AM to 1 PM",
     "Class Type": "Tutorial",
     "Module Code": "4CS017",
     "Module Title": "Internet Software Architecture and Database",
@@ -281,7 +281,7 @@
   },
   {
     "Day": "FRI",
-    "Time": "11:30 AM to 1:30 AM",
+    "Time": "11:30 AM to 1:30 PM",
     "Class Type": "Tutorial",
     "Module Code": "4CS017",
     "Module Title": "Internet Software Architecture and Database",
@@ -291,7 +291,7 @@
   },
   {
     "Day": "FRI",
-    "Time": "11:30 AM to 2:00 AM",
+    "Time": "11:30 AM to 2:00 PM",
     "Class Type": "Workshop",
     "Module Code": "4CS015",
     "Module Title": "Fundamentals of Computing",
