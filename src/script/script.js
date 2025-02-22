@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 let extraDatas = {
-  "4CS001": {
+  "4MM013": {
     image: "src/assets/svgs/problem-solving.svg",
     teacher: {
       profile: "src/assets/teacher-pfp/basanta-singh.jfif",
@@ -55,7 +55,7 @@ let extraDatas = {
       },
     },
   },
-  "4CS017": {
+  "4CS021": {
     image: "src/assets/svgs/database.svg",
     teacher: {
       profile: "src/assets/teacher-pfp/arvind-nepal.jfif",
@@ -67,7 +67,7 @@ let extraDatas = {
       },
     },
   },
-  "4CS015": {
+  "4CS020": {
     image: "src/assets/svgs/programming.svg",
     teacher: {
       profile: "src/assets/teacher-pfp/sanjeev-rai.jfif",
