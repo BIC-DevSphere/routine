@@ -1,302 +1,392 @@
 [
-    {
-        "Day": "SUN",
-        "Time": "8 AM to 10 AM",
-        "Class Type": "Tutorial",
-        "Module Code": "4CS021",
-        "Module Title": "Introduction to Object Oriented Programming",
-        "Lecturer": "Mr. Arvind Nepal",
-        "Group": "L4CG4",
-        "Room": "SR - 01 Wolves"
-    },
-    {
-        "Day": "SUN",
-        "Time": "8 AM to 10 AM",
-        "Class Type": "Tutorial",
-        "Module Code": "4MM013",
-        "Module Title": "Computational Mathematics",
-        "Lecturer": "Mr. Basanta Singh",
-        "Group": "L4CG3",
-        "Room": "TR - 01 Koshi"
-    },
-    {
-        "Day": "SUN",
-        "Time": "8 AM to 10 AM",
-        "Class Type": "Tutorial",
-        "Module Code": "4CS020",
-        "Module Title": "Interactive 3D Applications and Academic Skills",
-        "Lecturer": "Mr. Sanjeev Chamling",
-        "Group": "L4CG1",
-        "Room": "LAB - 01 Baraha"
-    },
-    {
-        "Day": "SUN",
-        "Time": "11 AM to 1 PM",
-        "Class Type": "Tutorial",
-        "Module Code": "4CS020",
-        "Module Title": "Interactive 3D Applications and Academic Skills",
-        "Lecturer": "Mr. Sanjeev Chamling",
-        "Group": "L4CG4",
-        "Room": "SR - 01 Wolves"
-    },
-    {
-        "Day": "SUN",
-        "Time": "11 AM to 1 PM",
-        "Class Type": "Tutorial",
-        "Module Code": "4MM013",
-        "Module Title": "Computational Mathematics",
-        "Lecturer": "Mr. Sandip Tiwari",
-        "Group": "L4CG1",
-        "Room": "SR - 02 Compton"
-    },
-    {
-        "Day": "SUN",
-        "Time": "11 AM to 1 PM",
-        "Class Type": "Tutorial",
-        "Module Code": "4MM013",
-        "Module Title": "Computational Mathematics",
-        "Lecturer": "Mr. Basanta Singh",
-        "Group": "L4CG2",
-        "Room": "TR - 01 Koshi"
-    },
-    {
-        "Day": "MON",
-        "Time": "8:00 AM to 10:30 AM",
-        "Class Type": "Workshop",
-        "Module Code": "4MM013",
-        "Module Title": "Computational Mathematics",
-        "Lecturer": "Mr. Sandip Tiwari",
-        "Group": "L4CG1",
-        "Room": "SR - 01 Wolves"
-    },
-    {
-        "Day": "MON",
-        "Time": "8 AM to 10 AM",
-        "Class Type": "Tutorial",
-        "Module Code": "4CS020",
-        "Module Title": "Interactive 3D Applications and Academic Skills",
-        "Lecturer": "Mr. Sanjeev Chamling",
-        "Group": "L4CG2",
-        "Room": "TR - 01 Koshi"
-    },
-    {
-        "Day": "MON",
-        "Time": "8 AM to 10:30 AM",
-        "Class Type": "Workshop",
-        "Module Code": "4MM013",
-        "Module Title": "Computational Mathematics",
-        "Lecturer": "Mr. Basanta Singh",
-        "Group": "L4CG3",
-        "Room": "LAB - 01 Baraha"
-    },
-    {
-        "Day": "MON",
-        "Time": "11:30 AM to 1:30 PM",
-        "Class Type": "Tutorial",
-        "Module Code": "4CS020",
-        "Module Title": "Interactive 3D Applications and Academic Skills",
-        "Lecturer": "Mr. Sanjeev Chamling",
-        "Group": "L4CG3",
-        "Room": "LT - 01 Wulfurna"
-    },
-    {
-        "Day": "MON",
-        "Time": "11:00 AM to 1:30 PM",
-        "Class Type": "Workshop",
-        "Module Code": "4CS021",
-        "Module Title": "Introduction to Object Oriented Programming",
-        "Lecturer": "Mr. Sandip Tiwari",
-        "Group": "L4CG2",
-        "Room": "SR - 01 Wolves"
-    },
-    {
-        "Day": "MON",
-        "Time": "11:30 AM to 2:00 PM",
-        "Class Type": "Workshop",
-        "Module Code": "4CS021",
-        "Module Title": "Introduction to Object Oriented Programming",
-        "Lecturer": "Mr. Arvind Nepal",
-        "Group": "L4CG1",
-        "Room": "LAB - 01 Baraha"
-    },
-    {
-        "Day": "TUE",
-        "Time": "8 AM to 10 AM",
-        "Class Type": "Tutorial",
-        "Module Code": "4MM013",
-        "Module Title": "Computational Mathematics",
-        "Lecturer": "Mr. Sandip Tiwari",
-        "Group": "L4CG4",
-        "Room": "TR - 01 Koshi"
-    },
-    {
-        "Day": "TUE",
-        "Time": "8 AM to 10:30 AM",
-        "Class Type": "Workshop",
-        "Module Code": "4CS020",
-        "Module Title": "Interactive 3D Applications and Academic Skills",
-        "Lecturer": "Mr. Sanjeev Chamling",
-        "Group": "L4CG3",
-        "Room": "LAB - 01 Baraha"
-    },
-    {
-        "Day": "TUE",
-        "Time": "11 AM to 1:30 PM",
-        "Class Type": "Workshop",
-        "Module Code": "4CS021",
-        "Module Title": "Introduction to Object Oriented Programming",
-        "Lecturer": "Mr. Arvind Nepal",
-        "Group": "L4CG4",
-        "Room": "SR - 01 Wolves"
-    },
-    {
-        "Day": "TUE",
-        "Time": "12:00 PM to 2:30 PM",
-        "Class Type": "Workshop",
-        "Module Code": "4MM013",
-        "Module Title": "Computational Mathematics",
-        "Lecturer": "Mr. Basanta Singh",
-        "Group": "L4CG2",
-        "Room": "LAB - 01 Baraha"
-    },
-    {
-        "Day": "WED",
-        "Time": "8 AM to 10 AM",
-        "Class Type": "Lecture",
-        "Module Code": "4CS021",
-        "Module Title": "Introduction to Object Oriented Programming",
-        "Lecturer": "Mr. Arvind Nepal",
-        "Group": "L4CG1+L4CG2",
-        "Room": "LT - 01 Wulfurna"
-    },
-    {
-        "Day": "WED",
-        "Time": "8 AM to 10:30 AM",
-        "Class Type": "Workshop",
-        "Module Code": "4MM013",
-        "Module Title": "Computational Mathematics",
-        "Lecturer": "Mr. Sandip Tiwari",
-        "Group": "L4CG4",
-        "Room": "LAB - 01 Baraha"
-    },
-    {
-        "Day": "WED",
-        "Time": "11:30 AM to 2:00 PM",
-        "Class Type": "Workshop",
-        "Module Code": "4CS020",
-        "Module Title": "Interactive 3D Applications and Academic Skills",
-        "Lecturer": "Mr. Sanjeev Chamling",
-        "Group": "L4CG1",
-        "Room": "LAB - 01 Baraha"
-    },
-    {
-        "Day": "WED",
-        "Time": "12:00 PM to 2:00 PM",
-        "Class Type": "Lecture",
-        "Module Code": "4CS021",
-        "Module Title": "Introduction to Object Oriented Programming",
-        "Lecturer": "Mr. Arvind Nepal",
-        "Group": "L4CG3 + L4CG4",
-        "Room": "LT - 01 Wulfurna"
-    },
-    {
-        "Day": "THU",
-        "Time": "8 AM to 10 AM",
-        "Class Type": "Lecture",
-        "Module Code": "4MM013",
-        "Module Title": "Computational Mathematics",
-        "Lecturer": "Mr. Basanta Singh",
-        "Group": "L4CG3 + L4CG4",
-        "Room": "LT - 01 Wulfurna"
-    },
-    {
-        "Day": "THU",
-        "Time": "8 AM to 10 AM",
-        "Class Type": "Tutorial",
-        "Module Code": "4CS021",
-        "Module Title": "Introduction to Object Oriented Programming",
-        "Lecturer": "Mr. Arvind Nepal",
-        "Group": "L4CG1",
-        "Room": "TR - 01 Koshi"
-    },
-    {
-        "Day": "THU",
-        "Time": "8 AM to 10:30 AM",
-        "Class Type": "Workshop",
-        "Module Code": "4CS020",
-        "Module Title": "Interactive 3D Applications and Academic Skills",
-        "Lecturer": "Mr. Sanjeev Chamling",
-        "Group": "L4CG2",
-        "Room": "LAB - 01 Baraha"
-    },
-    {
-        "Day": "THU",
-        "Time": "11:00 AM to 1:00 PM",
-        "Class Type": "Tutorial",
-        "Module Code": "4CS021",
-        "Module Title": "Introduction to Object Oriented Programming",
-        "Lecturer": "Mr. Sandip Tiwari",
-        "Group": "L4CG3",
-        "Room": "SR - 02 Compton"
-    },
-    {
-        "Day": "THU",
-        "Time": "11:00 AM to 1:30 PM",
-        "Class Type": "Workshop",
-        "Module Code": "4CS020",
-        "Module Title": "Interactive 3D Applications and Academic Skills",
-        "Lecturer": "Mr. Sanjeev Chamling",
-        "Group": "L4CG4",
-        "Room": "LAB - 01 Baraha"
-    },
-    {
-        "Day": "THU",
-        "Time": "12:00 PM to 2:00 PM",
-        "Class Type": "Lecture",
-        "Module Code": "4MM013",
-        "Module Title": "Computational Mathematics",
-        "Lecturer": "Mr. Basanta Singh",
-        "Group": "L4CG1+L4CG2",
-        "Room": "LT - 01 Wulfurna"
-    },
-    {
-        "Day": "FRI",
-        "Time": "8 AM to 10 AM",
-        "Class Type": "Lecture",
-        "Module Code": "4CS020",
-        "Module Title": "Interactive 3D Applications and Academic Skills",
-        "Lecturer": "Mr. Sanjeev Chamling",
-        "Group": "L4CG1+L4CG2",
-        "Room": "LT - 01 Wulfurna"
-    },
-    {
-        "Day": "FRI",
-        "Time": "8 AM to 10:30 AM",
-        "Class Type": "Workshop",
-        "Module Code": "4CS021",
-        "Module Title": "Introduction to Object Oriented Programming",
-        "Lecturer": "Mr. Sandip Tiwari",
-        "Group": "L4CG3",
-        "Room": "LAB - 01 Baraha"
-    },
-    {
-        "Day": "FRI",
-        "Time": "11 AM to 1 PM",
-        "Class Type": "Tutorial",
-        "Module Code": "4CS021",
-        "Module Title": "Introduction to Object Oriented Programming",
-        "Lecturer": "Mr. Sandip Tiwari",
-        "Group": "L4CG2",
-        "Room": "SR - 02 Compton"
-    },
-    {
-        "Day": "FRI",
-        "Time": "12 PM to 2 PM",
-        "Class Type": "Lecture",
-        "Module Code": "4CS020",
-        "Module Title": "Interactive 3D Applications and Academic Skills",
-        "Lecturer": "Mr. Sanjeev Chamling",
-        "Group": "L4CG3 + L4CG4",
-        "Room": "LT - 01 Wulfurna"
-    }
+  {
+    "Day": "SUN",
+    "Time": "8 AM to 10 AM",
+    "Class Type": "Tutorial",
+    "Module Code": "4CS021",
+    "Module Title": "Introduction to Object Oriented Programming",
+    "Lecturer": "Mr. Arvind Nepal",
+    "Group": "L4CG4",
+    "Room": "SR - 01 Wolves"
+  },
+  {
+    "Day": "SUN",
+    "Time": "8 AM to 10 AM",
+    "Class Type": "Tutorial",
+    "Module Code": "4MM013",
+    "Module Title": "Computational Mathematics",
+    "Lecturer": "Mr. Basanta Singh",
+    "Group": "L4CG3",
+    "Room": "TR - 01 Koshi"
+  },
+  {
+    "Day": "SUN",
+    "Time": "8 AM to 10 AM",
+    "Class Type": "Tutorial",
+    "Module Code": "4CS020",
+    "Module Title": "Interactive 3D Applications and Academic Skills",
+    "Lecturer": "Mr. Sanjeev Chamling",
+    "Group": "L4CG1",
+    "Room": "LAB - 01 Baraha"
+  },
+  {
+    "Day": "SUN",
+    "Time": "11 AM to 1 PM",
+    "Class Type": "Tutorial",
+    "Module Code": "4CS020",
+    "Module Title": "Interactive 3D Applications and Academic Skills",
+    "Lecturer": "Mr. Sanjeev Chamling",
+    "Group": "L4CG4",
+    "Room": "SR - 01 Wolves"
+  },
+  {
+    "Day": "SUN",
+    "Time": "11 AM to 1 PM",
+    "Class Type": "Tutorial",
+    "Module Code": "4MM013",
+    "Module Title": "Computational Mathematics",
+    "Lecturer": "Mr. Sandip Tiwari",
+    "Group": "L4CG1",
+    "Room": "SR - 02 Compton"
+  },
+  {
+    "Day": "SUN",
+    "Time": "11 AM to 1 PM",
+    "Class Type": "Tutorial",
+    "Module Code": "4MM013",
+    "Module Title": "Computational Mathematics",
+    "Lecturer": "Mr. Basanta Singh",
+    "Group": "L4CG2",
+    "Room": "TR - 01 Koshi"
+  },
+  {
+    "Day": "MON",
+    "Time": "8:00 AM to 10:30 AM",
+    "Class Type": "Workshop",
+    "Module Code": "4MM013",
+    "Module Title": "Computational Mathematics",
+    "Lecturer": "Mr. Sandip Tiwari",
+    "Group": "L4CG1",
+    "Room": "SR - 01 Wolves"
+  },
+  {
+    "Day": "MON",
+    "Time": "8 AM to 10 AM",
+    "Class Type": "Tutorial",
+    "Module Code": "4CS020",
+    "Module Title": "Interactive 3D Applications and Academic Skills",
+    "Lecturer": "Mr. Sanjeev Chamling",
+    "Group": "L4CG2",
+    "Room": "TR - 01 Koshi"
+  },
+  {
+    "Day": "MON",
+    "Time": "8 AM to 10:30 AM",
+    "Class Type": "Workshop",
+    "Module Code": "4MM013",
+    "Module Title": "Computational Mathematics",
+    "Lecturer": "Mr. Basanta Singh",
+    "Group": "L4CG3",
+    "Room": "LAB - 01 Baraha"
+  },
+  {
+    "Day": "MON",
+    "Time": "11:30 AM to 1:30 PM",
+    "Class Type": "Tutorial",
+    "Module Code": "4CS020",
+    "Module Title": "Interactive 3D Applications and Academic Skills",
+    "Lecturer": "Mr. Sanjeev Chamling",
+    "Group": "L4CG3",
+    "Room": "LT - 01 Wulfurna"
+  },
+  {
+    "Day": "MON",
+    "Time": "11:00 AM to 1:30 PM",
+    "Class Type": "Workshop",
+    "Module Code": "4CS021",
+    "Module Title": "Introduction to Object Oriented Programming",
+    "Lecturer": "Mr. Sandip Tiwari",
+    "Group": "L4CG2",
+    "Room": "SR - 01 Wolves"
+  },
+  {
+    "Day": "MON",
+    "Time": "11:30 AM to 2:00 PM",
+    "Class Type": "Workshop",
+    "Module Code": "4CS021",
+    "Module Title": "Introduction to Object Oriented Programming",
+    "Lecturer": "Mr. Arvind Nepal",
+    "Group": "L4CG1",
+    "Room": "LAB - 01 Baraha"
+  },
+  {
+    "Day": "TUE",
+    "Time": "8 AM to 10 AM",
+    "Class Type": "Tutorial",
+    "Module Code": "4MM013",
+    "Module Title": "Computational Mathematics",
+    "Lecturer": "Mr. Sandip Tiwari",
+    "Group": "L4CG4",
+    "Room": "TR - 01 Koshi"
+  },
+  {
+    "Day": "TUE",
+    "Time": "8 AM to 10:30 AM",
+    "Class Type": "Workshop",
+    "Module Code": "4CS020",
+    "Module Title": "Interactive 3D Applications and Academic Skills",
+    "Lecturer": "Mr. Sanjeev Chamling",
+    "Group": "L4CG3",
+    "Room": "LAB - 01 Baraha"
+  },
+  {
+    "Day": "TUE",
+    "Time": "11 AM to 1:30 PM",
+    "Class Type": "Workshop",
+    "Module Code": "4CS021",
+    "Module Title": "Introduction to Object Oriented Programming",
+    "Lecturer": "Mr. Arvind Nepal",
+    "Group": "L4CG4",
+    "Room": "SR - 01 Wolves"
+  },
+  {
+    "Day": "TUE",
+    "Time": "12:00 PM to 2:30 PM",
+    "Class Type": "Workshop",
+    "Module Code": "4MM013",
+    "Module Title": "Computational Mathematics",
+    "Lecturer": "Mr. Basanta Singh",
+    "Group": "L4CG2",
+    "Room": "LAB - 01 Baraha"
+  },
+  {
+    "Day": "WED",
+    "Time": "8 AM to 10 AM",
+    "Class Type": "Lecture",
+    "Module Code": "4CS021",
+    "Module Title": "Introduction to Object Oriented Programming",
+    "Lecturer": "Mr. Arvind Nepal",
+    "Group": "L4CG1+L4CG2",
+    "Room": "LT - 01 Wulfurna"
+  },
+  {
+    "Day": "WED",
+    "Time": "8 AM to 10:30 AM",
+    "Class Type": "Workshop",
+    "Module Code": "4MM013",
+    "Module Title": "Computational Mathematics",
+    "Lecturer": "Mr. Sandip Tiwari",
+    "Group": "L4CG4",
+    "Room": "LAB - 01 Baraha"
+  },
+  {
+    "Day": "WED",
+    "Time": "11:30 AM to 2:00 PM",
+    "Class Type": "Workshop",
+    "Module Code": "4CS020",
+    "Module Title": "Interactive 3D Applications and Academic Skills",
+    "Lecturer": "Mr. Sanjeev Chamling",
+    "Group": "L4CG1",
+    "Room": "LAB - 01 Baraha"
+  },
+  {
+    "Day": "WED",
+    "Time": "12:00 PM to 2:00 PM",
+    "Class Type": "Lecture",
+    "Module Code": "4CS021",
+    "Module Title": "Introduction to Object Oriented Programming",
+    "Lecturer": "Mr. Arvind Nepal",
+    "Group": "L4CG3 + L4CG4",
+    "Room": "LT - 01 Wulfurna"
+  },
+  {
+    "Day": "THU",
+    "Time": "8 AM to 10 AM",
+    "Class Type": "Lecture",
+    "Module Code": "4MM013",
+    "Module Title": "Computational Mathematics",
+    "Lecturer": "Mr. Basanta Singh",
+    "Group": "L4CG3 + L4CG4",
+    "Room": "LT - 01 Wulfurna"
+  },
+  {
+    "Day": "THU",
+    "Time": "8 AM to 10 AM",
+    "Class Type": "Tutorial",
+    "Module Code": "4CS021",
+    "Module Title": "Introduction to Object Oriented Programming",
+    "Lecturer": "Mr. Arvind Nepal",
+    "Group": "L4CG1",
+    "Room": "TR - 01 Koshi"
+  },
+  {
+    "Day": "THU",
+    "Time": "8 AM to 10:30 AM",
+    "Class Type": "Workshop",
+    "Module Code": "4CS020",
+    "Module Title": "Interactive 3D Applications and Academic Skills",
+    "Lecturer": "Mr. Sanjeev Chamling",
+    "Group": "L4CG2",
+    "Room": "LAB - 01 Baraha"
+  },
+  {
+    "Day": "THU",
+    "Time": "11:00 AM to 1:00 PM",
+    "Class Type": "Tutorial",
+    "Module Code": "4CS021",
+    "Module Title": "Introduction to Object Oriented Programming",
+    "Lecturer": "Mr. Sandip Tiwari",
+    "Group": "L4CG3",
+    "Room": "SR - 02 Compton"
+  },
+  {
+    "Day": "THU",
+    "Time": "11:00 AM to 1:30 PM",
+    "Class Type": "Workshop",
+    "Module Code": "4CS020",
+    "Module Title": "Interactive 3D Applications and Academic Skills",
+    "Lecturer": "Mr. Sanjeev Chamling",
+    "Group": "L4CG4",
+    "Room": "LAB - 01 Baraha"
+  },
+  {
+    "Day": "THU",
+    "Time": "12:00 PM to 2:00 PM",
+    "Class Type": "Lecture",
+    "Module Code": "4MM013",
+    "Module Title": "Computational Mathematics",
+    "Lecturer": "Mr. Basanta Singh",
+    "Group": "L4CG1+L4CG2",
+    "Room": "LT - 01 Wulfurna"
+  },
+  {
+    "Day": "FRI",
+    "Time": "8 AM to 10 AM",
+    "Class Type": "Lecture",
+    "Module Code": "4CS020",
+    "Module Title": "Interactive 3D Applications and Academic Skills",
+    "Lecturer": "Mr. Sanjeev Chamling",
+    "Group": "L4CG1+L4CG2",
+    "Room": "LT - 01 Wulfurna"
+  },
+  {
+    "Day": "FRI",
+    "Time": "8 AM to 10:30 AM",
+    "Class Type": "Workshop",
+    "Module Code": "4CS021",
+    "Module Title": "Introduction to Object Oriented Programming",
+    "Lecturer": "Mr. Sandip Tiwari",
+    "Group": "L4CG3",
+    "Room": "LAB - 01 Baraha"
+  },
+  {
+    "Day": "FRI",
+    "Time": "11 AM to 1 PM",
+    "Class Type": "Tutorial",
+    "Module Code": "4CS021",
+    "Module Title": "Introduction to Object Oriented Programming",
+    "Lecturer": "Mr. Sandip Tiwari",
+    "Group": "L4CG2",
+    "Room": "SR - 02 Compton"
+  },
+  {
+    "Day": "FRI",
+    "Time": "12 PM to 2 PM",
+    "Class Type": "Lecture",
+    "Module Code": "4CS020",
+    "Module Title": "Interactive 3D Applications and Academic Skills",
+    "Lecturer": "Mr. Sanjeev Chamling",
+    "Group": "L4CG3 + L4CG4",
+    "Room": "LT - 01 Wulfurna"
+  },
+  {
+    "Day": "TUE",
+    "Time": "09:00 AM - 11:00 AM",
+    "Class Type": "Lecture",
+    "Module Code": "4CS001",
+    "Module Title": "Introductory Programming and Problem Solving",
+    "Lecturer": "Mr. Basanta Singh",
+    "Group": "L4CG5",
+    "Room": "SR - 01 Wolves"
+  },
+  {
+    "Day": "TUE",
+    "Time": "12:00 PM - 2:30 PM",
+    "Class Type": "Workshop",
+    "Module Code": "4CS015",
+    "Module Title": "Fundamentals of Computing",
+    "Lecturer": "Mr. Sandip Tiwari",
+    "Group": "L4CG5",
+    "Room": "TR - 01 Koshi"
+  },
+  {
+    "Day": "WED",
+    "Time": "09:00 AM - 11:00 AM",
+    "Class Type": "Lecture",
+    "Module Code": "4CS015",
+    "Module Title": "Fundamentals of Computing",
+    "Lecturer": "Mr. Sanjeev Chamling",
+    "Group": "L4CG5",
+    "Room": "TR - 01 Koshi"
+  },
+  {
+    "Day": "WED",
+    "Time": "12:00 PM - 2:00 PM",
+    "Class Type": "Tutorial",
+    "Module Code": "4CS001",
+    "Module Title": "Introductory Programming and Problem Solving",
+    "Lecturer": "Mr. Basanta Singh",
+    "Group": "L4CG5",
+    "Room": "TR - 02 Tamor"
+  },
+  {
+    "Day": "THU",
+    "Time": "8:00 AM - 10:00 AM",
+    "Class Type": "Tutorial",
+    "Module Code": "4CS015",
+    "Module Title": "Fundamentals of Computing",
+    "Lecturer": "Mr. Sandip Tiwari",
+    "Group": "L4CG5",
+    "Room": "TR - 03 Barun"
+  },
+  {
+    "Day": "FRI",
+    "Time": "8:00 AM - 10:00 AM",
+    "Class Type": "Lecture",
+    "Module Code": "4CS017",
+    "Module Title": "Internet Software Architecture and Database",
+    "Lecturer": "Mr. Arvind Nepal",
+    "Group": "L4CG5",
+    "Room": "TR - 01 Koshi"
+  },
+  {
+    "Day": "FRI",
+    "Time": "11:00 AM - 1:30 PM",
+    "Class Type": "Workshop",
+    "Module Code": "4CS001",
+    "Module Title": "Introductory Programming and Problem Solving",
+    "Lecturer": "Mr. Basanta Singh",
+    "Group": "L4CG5",
+    "Room": "TR - 01 Koshi"
+  },
+  {
+    "Day": "SUN",
+    "Time": "11:00 AM - 1:00 PM",
+    "Class Type": "Tutorial",
+    "Module Code": "4CS017",
+    "Module Title": "Internet Software Architecture and Database",
+    "Lecturer": "Mr. Arvind Nepal",
+    "Group": "L4CG5",
+    "Room": "LAB - 01 Baraha"
+  },
+  {
+    "Day": "MON",
+    "Time": "8:00 AM - 10:30 AM",
+    "Class Type": "Workshop",
+    "Module Code": "4CS017",
+    "Module Title": "Internet Software Architecture and Database",
+    "Lecturer": "Mr. Arvind Nepal",
+    "Group": "L4CG5",
+    "Room": "TR - 02 Tamor"
+  }
 ]
